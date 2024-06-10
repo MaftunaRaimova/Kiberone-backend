@@ -1,26 +1,66 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateGroupDto } from './dto/create-group.dto';
 import { UpdateGroupDto } from './dto/update-group.dto';
+import { PrismaService } from '../prisma.service';
+
 
 @Injectable()
 export class GroupService {
-  create(createGroupDto: CreateGroupDto) {
-    return 'This action adds a new group';
+  constructor(private readonly prisma: PrismaService) {}
+  
+  async create(body: CreateGroupDto) {
+    const group = await this.prisma.group.create({
+      data: {
+        ...body
+      }
+    })
+    return group;
   }
 
   findAll() {
-    return `This action returns all group`;
+    const group = this.prisma.group.findMany();
+    return group;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} group`;
+  async findGroupById(id: number) {
+    try {
+      const group = await this.prisma.group.findUnique({
+        where: {
+          id: id
+        }
+      })
+      return group;
+    } catch (error) {
+      throw new HttpException('Failed to update group', HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateGroupDto: UpdateGroupDto) {
-    return `This action updates a #${id} group`;
+  async updateGroup(id: number, body: UpdateGroupDto) {
+    try {
+      const group = await this.prisma.group.update({
+        where: {
+          id: id
+        },
+        data: {
+          ...body
+        }
+      })
+      return group;
+    } catch (error) {
+      throw new HttpException('Failed to update group', HttpStatus.BAD_REQUEST);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} group`;
+  async remove(id: number) {
+    try {
+      const group = await this.prisma.group.delete({
+        where: {
+          id: id
+        }
+      })
+      return group;
+    } catch (error) {
+      throw new HttpException('Failed to delete group', HttpStatus.BAD_REQUEST);
+    }
   }
 }

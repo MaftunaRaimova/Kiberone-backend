@@ -1,1 +1,3 @@
-export class CreateCouratorDto {}
+export class CreateCouratorDto {
+    name: string;
+}

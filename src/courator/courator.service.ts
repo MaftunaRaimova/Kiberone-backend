@@ -1,26 +1,67 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateCouratorDto } from './dto/create-courator.dto';
 import { UpdateCouratorDto } from './dto/update-courator.dto';
+import { PrismaService } from '../prisma.service';
 
 @Injectable()
 export class CouratorService {
-  create(createCouratorDto: CreateCouratorDto) {
-    return 'This action adds a new courator';
+  constructor(private readonly prisma: PrismaService) {}
+
+  async create(body: CreateCouratorDto) {
+    const courator = await this.prisma.courator.create({
+      data: {
+        ...body
+      }
+    })
+    return courator;
   }
 
-  findAll() {
-    return `This action returns all courator`;
+  async findAllCourator() {
+    const courator = await this.prisma.courator.findMany();
+    return courator;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} courator`;
+  
+  async findCouratorById(id: number) {
+    try {
+      const courator = await this.prisma.courator.findUnique({
+        where: {
+          id: id
+        }
+      })
+      return courator;
+    } catch (error) {
+      throw new HttpException('Failed to update courator', HttpStatus.BAD_REQUEST);
+    }
+  }
+    
+
+  async updateCourator(id: number, body: UpdateCouratorDto) {
+    try {
+      const courator = await this.prisma.courator.update({
+        where: {
+          id: id
+        },
+        data: {
+          ...body
+        }
+      })
+      return courator;
+    } catch (error) {
+      throw new HttpException('Failed to update courator', HttpStatus.BAD_REQUEST);
+    }
   }
 
-  update(id: number, updateCouratorDto: UpdateCouratorDto) {
-    return `This action updates a #${id} courator`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} courator`;
+  async remove(id: number) {
+    try {
+      const courator = await this.prisma.courator.delete({
+        where: {
+          id: id
+        }
+      })
+      return courator;
+    } catch (error) {
+      throw new HttpException('Failed to delete courator', HttpStatus.BAD_REQUEST);
+    }
   }
 }

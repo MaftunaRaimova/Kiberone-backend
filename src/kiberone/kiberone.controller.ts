@@ -2,16 +2,34 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { KiberoneService } from './kiberone.service';
 import { CreateKiberoneDto } from './dto/create-kiberone.dto';
 import { UpdateKiberoneDto } from './dto/update-kiberone.dto';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBody, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Kiberone')
 @Controller('kiberone')
 export class KiberoneController {
   constructor(private readonly kiberoneService: KiberoneService) {}
 
+  @ApiBody({
+    schema: {
+      type: 'object',
+      properties: {
+        amount: { type: 'number' },
+        studentId: { type: 'number' },
+        couratorId: { type: 'number' },
+        reason: { type: 'string' },
+        status: { type: 'string'}
+      },
+    },
+  })
+
   @Post()
-  create(@Body() createKiberoneDto: CreateKiberoneDto) {
-    return this.kiberoneService.create(createKiberoneDto);
+    async addStudent(
+      @Body()
+      body: CreateKiberoneDto,
+    )
+    
+  {
+    return this.kiberoneService.create(body);
   }
 
   @Get()
@@ -19,15 +37,25 @@ export class KiberoneController {
     return this.kiberoneService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.kiberoneService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateKiberoneDto: UpdateKiberoneDto) {
-    return this.kiberoneService.update(+id, updateKiberoneDto);
-  }
+  @Patch(':id') 
+  @ApiBody({
+    schema: {
+      type: 'object',
+      properties: {
+        amount: { type: 'number' },
+        studentId: { type: 'number' },
+        couratorId: { type: 'number' },
+        reason: { type: 'string' },
+        status: { type: 'string'}
+      },
+    },
+  })
+  async updateKiberone(
+  @Param('id') id: string,
+  @Body() body: UpdateKiberoneDto
+ ) {
+  return this.kiberoneService.updateKiberone(+id, body);
+ }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
