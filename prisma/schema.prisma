@@ -15,7 +15,7 @@ model Student {
   createdAt    DateTime    @default(now())
   kiberones    Kiberone[]
   courator     Courator    @relation(fields: [couratorId], references: [id])
-  couratorId   Int?
+  couratorId   Int
   group        Group?      @relation(fields: [groupId], references: [id]) // Добавляем противоположное поле отношения на модель Group
   groupId      Int?
 }
