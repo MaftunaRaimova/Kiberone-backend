@@ -1,7 +1,10 @@
 export class CreateStudentDto {
     name: string;
     age: number;
-    status: string;
+    login: string;
+    password: string;
+    isActive: boolean;
     couratorId: number;
     groupId: number;
 }
+

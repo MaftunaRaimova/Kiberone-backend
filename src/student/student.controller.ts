@@ -16,13 +16,14 @@ export class StudentController {
       properties: {
         name: { type: 'string' },
         age: { type: 'number' },
-        status: { type: 'string' },
+        login: { type: 'string' },
+        password: { type: 'string' },
+        isActive: { type: 'string' },
         couratorId: { type: 'number' },
         groupId: { type: 'number'}
       },
     },
   })
-
   @Post()
     async addStudent(
       @Body()
@@ -52,7 +53,9 @@ export class StudentController {
       properties: {
         name: { type: 'string' },
         age: { type: 'number' },
-        status: { type: 'string' },
+        login: { type: 'string' },
+        password: { type: 'string' },
+        isActive: { type: 'string' },
         couratorId: { type: 'number' },
         groupId: { type: 'number'}
       },

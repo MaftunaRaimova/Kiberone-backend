@@ -10,7 +10,8 @@ generator client {
 
 model Courator {
   id           Int         @id @default(autoincrement())
-  name         String
+  name         String      @unique
+  password     String
   groups       Group[]
   students     Student[]   // Обратное поле отношения для связи с моделью Student
   kiberones    Kiberone[]  // Обратное поле отношения для связи с моделью Kiberone
@@ -22,8 +23,8 @@ model Group {
   name         String
   description  String?
   students     Student[]
-  courator     Courator?   @relation(fields: [couratorId], references: [id])
-  couratorId   Int?
+  courator     Courator   @relation(fields: [couratorId], references: [id])
+  couratorId   Int
   homework     Homework[]
   createdAt    DateTime    @default(now())
   updatedAt    DateTime?   @updatedAt
@@ -37,7 +38,7 @@ model Kiberone {
   courator     Courator?    @relation(fields: [couratorId], references: [id])
   couratorId   Int?
   reason       String
-  isApproved   Boolean
+  isApproved   Boolean      @default(false)
   createdAt    DateTime    @default(now())
   updatedAt    DateTime?   @updatedAt
 }
@@ -45,7 +46,7 @@ model Kiberone {
 model Parent {
   id           Int         @id @default(autoincrement())
   name         String
-  login        String
+  login        String      @unique
   password     String
   students     Student[]
   pollResults  PollResults[]
@@ -55,14 +56,15 @@ model Parent {
 model Student {
   id           Int         @id @default(autoincrement())
   name         String
-  age          Int
-  login        String
+  age          Int?
+  login        String      @unique
   password     String
-  isActive     Boolean
+  isActive     Boolean     @default(true)
   kiberones    Kiberone[]
-  courator     Courator?    @relation(fields: [couratorId], references: [id])
-  couratorId   Int?
-  group        Group      @relation(fields: [groupId], references: [id])
+  attendance   Attendance[]
+  courator     Courator    @relation(fields: [couratorId], references: [id])
+  couratorId   Int
+  group        Group       @relation(fields: [groupId], references: [id])
   groupId      Int
   parent       Parent?     @relation(fields: [parentId], references: [id])
   parentId     Int?
@@ -83,10 +85,10 @@ model Limits {
 model Tests {
   id          Int         @id @default(autoincrement())
   name        String
-  questions   String[]
+  answer      String[]
   correctAnswer    Int
   deadline    DateTime
-  TestResults TestsResult[]
+  testResults TestsResult[]
   createdAt   DateTime    @default(now())
   updatedAt   DateTime?   @updatedAt
 }
@@ -105,7 +107,7 @@ model TestsResult {
 model Polls {
   id          Int         @id @default(autoincrement())
   name        String
-  questions   String[]
+  answers     String[]
   PollResults PollResults[]
   deadline    DateTime
   createdAt   DateTime    @default(now())
@@ -125,11 +127,19 @@ model PollResults {
 
 model Homework {
   id          Int         @id @default(autoincrement())
-  title        String
+  title       String
   deadline    DateTime
   files       String[]
   group       Group       @relation(fields: [groupId], references: [id])
   groupId     Int
   createdAt   DateTime    @default(now())
   updatedAt   DateTime?   @updatedAt
+}
+
+model Attendance {
+  id          Int         @id @default(autoincrement())
+  student      Student    @relation(fields: [studentId], references: [id])
+  studentId    Int
+  isPresent    Boolean    @default(true)
+  date         DateTime   @default(now())
 }

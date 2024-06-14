@@ -3,5 +3,5 @@ export class CreateKiberoneDto {
     studentId: number;
     couratorId: number;
     reason: string;
-    status: string;
+    isApproved: boolean;
 }
