@@ -13,7 +13,7 @@ export class LoginCouratorController {
     schema: {
       type: 'object',
       properties: {
-        name: { type: 'string' },
+        login: { type: 'string' },
         password: { type: 'string' },
       },
     },

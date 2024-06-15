@@ -6,6 +6,7 @@ async function main() {
     const newCourator = await prisma.courator.create({
         data:{
             name: 'Maftuna',
+            login: 'Maftuna2',
             password: '123456'
         }
     })
@@ -16,7 +17,7 @@ async function student(){
         data:{
             name: 'Komila',
             age: 21,
-            login: 'Komila',
+            login: 'Komila2',
             password: '123456',
             isActive: true,
             couratorId: 1,
@@ -38,8 +39,8 @@ async function kiberone(){
     const newKiberone = await prisma.kiberone.create({
         data:{
             amount: 100,
-            studentId: 1,
-            couratorId: 1,
+            studentId: 7,
+            couratorId: 9,
             reason: 'For the project',
             isApproved: false
         }
@@ -49,8 +50,24 @@ async function parent(){
     const newParent = await prisma.parent.create({
         data:{
             name: 'Dilfuza',
-            login: 'Dilfuza',
+            login: 'Dilfuza2',
             password: '123456'
+        }
+    })
+}
+async function homework(){
+    const newHomework = await prisma.homework.create({
+        data:{
+            title: 'Math',
+            deadline: new Date(),
+            groupId: 1,
+            item:{
+                create:{
+                    title: 'Math',
+                    fileUrl: 'https://www.google.com',
+                }
+            }
+
         }
     })
 }
@@ -87,6 +104,12 @@ kiberone().catch(e => {
     prisma.$disconnect();
 })
 parent().catch(e => {
+    console.log(e);
+    process.exit(1);
+}).finally(() => {
+    prisma.$disconnect();
+})
+homework().catch(e => {
     console.log(e);
     process.exit(1);
 }).finally(() => {

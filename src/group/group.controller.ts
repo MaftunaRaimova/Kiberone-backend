@@ -1,13 +1,33 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { GroupService } from './group.service';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import { GroupService, GroupServiceAdmin } from './group.service';
 import { CreateGroupDto } from './dto/create-group.dto';
 import { UpdateGroupDto } from './dto/update-group.dto';
-import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
+import { AdminGuard } from 'src/admin/admin.guard';
 
 @ApiTags('Group')
 @Controller('group')
 export class GroupController {
   constructor(private readonly groupService: GroupService) {}
+
+  @Get()
+  findAll() {
+    return this.groupService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.groupService.findGroupById(+id);
+  }
+
+}
+
+@UseGuards(AdminGuard)
+@ApiBearerAuth()
+@ApiTags('Group', 'Admin')
+@Controller('group')
+export class GroupControllerAdmin{
+  constructor(private readonly groupServiceAdmin: GroupServiceAdmin) {}
 
   @ApiBody({
     schema: {
@@ -27,19 +47,8 @@ export class GroupController {
 
     )
   {
-    return this.groupService.create(body);
+    return this.groupServiceAdmin.create(body);
   }
-
-  @Get()
-  findAll() {
-    return this.groupService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.groupService.findGroupById(+id);
-  }
-
   @Patch(':id') 
   @ApiBody({
     schema: {
@@ -55,11 +64,11 @@ export class GroupController {
   @Param('id') id: string,
   @Body() body: UpdateGroupDto
  ) {
-  return this.groupService.updateGroup(+id, body);
+  return this.groupServiceAdmin.updateGroup(+id, body);
  }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.groupService.remove(+id);
+    return this.groupServiceAdmin.remove(+id);
   }
 }

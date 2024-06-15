@@ -5,8 +5,13 @@ import { PrismaService } from '../prisma.service';
 
 
 @Injectable()
-export class StudentService {
+export class StudentServiceAdmin {
   constructor(private readonly prisma: PrismaService) {}
+
+  findAll() {
+    const students = this.prisma.student.findMany();
+    return students;
+  }
 
   async create(body: CreateStudentDto) {
     const student = await this.prisma.student.create({
@@ -15,11 +20,6 @@ export class StudentService {
       }
     })
     return student;
-  }
-
-  findAll() {
-    const students = this.prisma.student.findMany();
-    return students;
   }
 
   async findStudentById(id: number) {
@@ -34,7 +34,7 @@ export class StudentService {
       throw new HttpException('Failed to update student', HttpStatus.BAD_REQUEST);
     }
   }
-  
+
   async updateStudent(id: number, body: UpdateStudentDto) {
     try {
       const student = await this.prisma.student.update({
@@ -64,3 +64,4 @@ export class StudentService {
     }
   }
 }
+

@@ -1,10 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { KiberoneService } from './kiberone.service';
 import { CreateKiberoneDto } from './dto/create-kiberone.dto';
 import { UpdateKiberoneDto } from './dto/update-kiberone.dto';
-import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
+import { AdminGuard } from 'src/admin/admin.guard';
 
-@ApiTags('Kiberone')
+@UseGuards(AdminGuard)
+@ApiBearerAuth()
+@ApiTags('Kiberone', 'Admin')
 @Controller('kiberone')
 export class KiberoneController {
   constructor(private readonly kiberoneService: KiberoneService) {}

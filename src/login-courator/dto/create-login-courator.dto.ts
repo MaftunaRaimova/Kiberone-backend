@@ -1,4 +1,4 @@
 export class CreateLoginCouratorDto {
-    name: string;
+    login: string;
     password: string
 }

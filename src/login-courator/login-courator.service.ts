@@ -9,7 +9,7 @@ export class LoginCouratorService {
 
   async search(body: CreateLoginCouratorDto) {
     const courator = await this.prisma.courator.findUnique({
-      where: { name: body.name },
+      where: { login: body.login },
     });
 
     if (courator) {

@@ -10,7 +10,8 @@ generator client {
 
 model Courator {
   id           Int         @id @default(autoincrement())
-  name         String      @unique
+  name         String      
+  login        String      @unique
   password     String
   groups       Group[]
   students     Student[]   // Обратное поле отношения для связи с моделью Student

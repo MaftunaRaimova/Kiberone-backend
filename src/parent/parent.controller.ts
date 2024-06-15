@@ -1,10 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { ParentService } from './parent.service';
 import { CreateParentDto } from './dto/create-parent.dto';
 import { UpdateParentDto } from './dto/update-parent.dto';
-import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
+import { AdminGuard } from 'src/admin/admin.guard';
 
-@ApiTags('Parent')
+@UseGuards(AdminGuard)
+@ApiBearerAuth()
+@ApiTags('Parent', 'Admin')
 @Controller('parent')
 export class ParentController {
   constructor(private readonly parentService: ParentService) {}

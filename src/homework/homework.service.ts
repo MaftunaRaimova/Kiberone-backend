@@ -56,9 +56,7 @@ export class HomeworkService {
 } 
 
 export class HomeworkServiceAdmin extends HomeworkService{
-  constructor(public readonly prisma: PrismaService) {
-    super(prisma);
-  }
+  
 
   async addHomework(body: CreateHomeworkDto) {
     try {

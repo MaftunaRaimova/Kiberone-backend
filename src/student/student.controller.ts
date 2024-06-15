@@ -1,14 +1,16 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { StudentService } from './student.service';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import { StudentServiceAdmin } from './student.service';
 import { CreateStudentDto } from './dto/create-student.dto';
 import { UpdateStudentDto } from './dto/update-student.dto';
-import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
+import { AdminGuard } from 'src/admin/admin.guard';
 
-
-@ApiTags('Student')
+@UseGuards(AdminGuard)
+@ApiBearerAuth()
+@ApiTags('Student', 'Admin')
 @Controller('student')
-export class StudentController {
-  constructor(private readonly studentService: StudentService) {}
+export class StudentControllerAdmin {
+  constructor(private readonly studentServiceAdmin: StudentServiceAdmin) {}
 
   @ApiBody({
     schema: {
@@ -33,17 +35,17 @@ export class StudentController {
     
   {
     body.age = +body.age;
-    return this.studentService.create(body);
+    return this.studentServiceAdmin.create(body);
   }
 
   @Get()
   findAll() {
-    return this.studentService.findAll();
+    return this.studentServiceAdmin.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.studentService.findStudentById(+id);
+    return this.studentServiceAdmin.findStudentById(+id);
   }
 
   @Patch(':id') 
@@ -65,11 +67,27 @@ export class StudentController {
   @Param('id') id: string,
   @Body() body: UpdateStudentDto
  ) {
-  return this.studentService.updateStudent(+id, body);
+  return this.studentServiceAdmin.updateStudent(+id, body);
  }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.studentService.remove(+id);
+    return this.studentServiceAdmin.remove(+id);
   }
 }
+
+// @ApiTags('Student')
+// @Controller('student')
+// export class StudentController {
+//   constructor(private readonly studentService: StudentService) {}
+
+//   @Get()
+//   findAll() {
+//     return this.studentService.findAll();
+//   }
+
+//   @Get(':id')
+//   findOne(@Param('id') id: string) {
+//     return this.studentService.findStudentById(+id);
+//   }
+// }
