@@ -45,7 +45,15 @@ async function kiberone(){
         }
     })
 }
-
+async function parent(){
+    const newParent = await prisma.parent.create({
+        data:{
+            name: 'Dilfuza',
+            login: 'Dilfuza',
+            password: '123456'
+        }
+    })
+}
 
 
 
@@ -73,6 +81,12 @@ group().catch(e => {
 })
 
 kiberone().catch(e => {
+    console.log(e);
+    process.exit(1);
+}).finally(() => {
+    prisma.$disconnect();
+})
+parent().catch(e => {
     console.log(e);
     process.exit(1);
 }).finally(() => {

@@ -9,9 +9,25 @@ import { PrismaService } from './prisma.service';
 import { TestsModule } from './tests/tests.module';
 import { LoginModule } from './login/login.module';
 import { LoginCouratorModule } from './login-courator/login-courator.module';
+import { ParentModule } from './parent/parent.module';
+import { HomeworkModule } from './homework/homework.module';
+import { AdminModule } from './admin/admin.module';
+// import { ServeStaticModule } from '@nestjs/serve-static';
+// import { join } from 'path';
+import { ItemModule } from './item/item.module';
 
 @Module({
-  imports: [StudentModule, CouratorModule, GroupModule, KiberoneModule, TestsModule, LoginModule, LoginCouratorModule],
+  imports: [StudentModule,
+    CouratorModule, 
+    GroupModule, 
+    KiberoneModule, 
+    TestsModule, 
+    LoginModule, 
+    LoginCouratorModule, 
+    ParentModule, 
+    HomeworkModule, 
+    AdminModule, ItemModule,
+  ],
   controllers: [AppController],
   providers: [AppService, PrismaService],
 })

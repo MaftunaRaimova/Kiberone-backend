@@ -9,6 +9,13 @@ async function bootstrap() {
     .setTitle('Kiberone')
     .setDescription('The Kiberone API description')
     .setVersion('1.0')
+    .addBearerAuth({
+      description: 'Enter your JWT token',
+       // 'Admin: Admin',
+      type: 'http',
+      scheme: 'bearer',
+      bearerFormat: 'JWT',
+    })
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
@@ -16,3 +23,4 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTcxNjM3MDg0NywiZXhwIjoxNzE4OTYyODQ3fQ.P9pY301MTP0YJYY06bfjbJIVRr-4_SeunXc_GcBcr-M

@@ -9,50 +9,33 @@ import { ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 export class CouratorController {
   constructor(private readonly couratorService: CouratorService) {}
 
-  @ApiBody({
-    schema: {
-      type: 'object',
-      properties: {
-        name: { type: 'string' },
-      },
-    },
-  })
+  @ApiOperation({ summary: 'Create new courator' })
+  @ApiBody({ type: CreateCouratorDto })
   @Post()
-    async addCourator(
-      @Body()
-      body: CreateCouratorDto,
-
-    )
-  {
+  async addCourator(@Body() body: CreateCouratorDto) {
     return this.couratorService.create(body);
   }
 
+  @ApiOperation({ summary: 'Get all courators' })
   @Get()
   async findAll() {
     return this.couratorService.findAllCourator();
   }
 
+  @ApiOperation({ summary: 'Get courator by ID' })
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.couratorService.findCouratorById(+id);
   }
-  @Patch(':id') 
-  @ApiBody({
-  schema: {
-    type: 'object',
-    properties: {
-      name: { type: 'string' },
-    },
-  },
- })
- async updateCourator(
-  @Param('id') id: string,
-  @Body() body: UpdateCouratorDto
- ) {
-  return this.couratorService.updateCourator(+id, body);
- }
 
+  @ApiOperation({ summary: 'Update courator by ID' })
+  @ApiBody({ type: UpdateCouratorDto })
+  @Patch(':id')
+  async updateCourator(@Param('id') id: string, @Body() body: UpdateCouratorDto) {
+    return this.couratorService.updateCourator(+id, body);
+  }
 
+  @ApiOperation({ summary: 'Delete courator by ID' })
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.couratorService.remove(+id);
