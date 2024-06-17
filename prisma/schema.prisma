@@ -96,6 +96,7 @@ model Tests {
 
 model TestsResult {
   id         Int         @id @default(autoincrement())
+  name       String
   student    Student     @relation(fields: [studentId], references: [id])
   studentId  Int
   test       Tests       @relation(fields: [testId], references: [id])

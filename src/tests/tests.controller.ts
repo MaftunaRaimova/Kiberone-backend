@@ -1,10 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { TestsService } from './tests.service';
 import { CreateTestDto } from './dto/create-test.dto';
 import { UpdateTestDto } from './dto/update-test.dto';
-import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
+import { AdminGuard } from 'src/admin/admin.guard';
 
-@ApiTags('Tests')
+@UseGuards(AdminGuard)
+@ApiBearerAuth()
+@ApiTags('Tests', 'Admin')
 @Controller('tests')
 export class TestsController {
   constructor(private readonly testsService: TestsService) {}
@@ -17,6 +20,7 @@ export class TestsController {
         answer: { type: 'array', items: { type: 'string' } },
         correctAnswer: { type: 'number' },
         deadline: { type: 'string', format: 'date-time' },
+        studentId: { type: 'number' }, // Добавляем studentId
       },
     },
   })
@@ -27,7 +31,7 @@ export class TestsController {
 
   @Get()
   findAll() {
-    return this.testsService.findAll();
+    return this.testsService.findAll()
   }
 
   @Get(':id')

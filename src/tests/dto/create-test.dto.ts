@@ -3,4 +3,5 @@ export class CreateTestDto {
     answer : string[];
     correctAnswer : number;
     deadline : Date;
+    studentId : number;
 }

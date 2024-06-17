@@ -1,26 +1,50 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateTestDto } from './dto/create-test.dto';
 import { UpdateTestDto } from './dto/update-test.dto';
+import { PrismaService } from 'src/prisma.service';
 
 @Injectable()
 export class TestsService {
-  create(createTestDto: CreateTestDto) {
-    return 'This action adds a new test';
+  constructor(private readonly prisma: PrismaService) {}
+
+  async create(body: CreateTestDto) {
+    const test = await this.prisma.tests.create({
+      data: {
+        name: body.name,
+        answer: body.answer,
+        correctAnswer: body.correctAnswer,
+        deadline: body.deadline,
+      },
+    });
+
+    await Promise.all(
+      body.answer.map((name, index) => {
+        return this.prisma.testsResult.create({
+          data: {
+            name: name,
+            testId: test.id,
+            studentId: body.studentId, // Используем studentId из DTO
+            isCorrect: index === body.correctAnswer,
+          },
+        });
+      })
+    );
+
+    return test;
   }
 
-  findAll() {
-    return `This action returns all tests`;
+  async findAll() {
+    return this.prisma.tests.findMany({ include: { testResults: true } });
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} test`;
+  async findOne(id: number) {
+    return this.prisma.tests.findUnique({
+      where: { id },
+      include: { testResults: true },
+    });
   }
 
-  update(id: number, updateTestDto: UpdateTestDto) {
-    return `This action updates a #${id} test`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} test`;
+  async remove(id: number) {
+    await this.prisma.tests.delete({ where: { id: id}})
   }
 }

@@ -22,6 +22,15 @@ export class StudentServiceAdmin {
     return student;
   }
 
+  async getStudentResults(studentId: number) {
+    return this.prisma.testsResult.findMany({
+      where: { studentId },
+      include: {
+        test: true,
+      },
+    });
+  }
+
   async findStudentById(id: number) {
     try {
       const student = await this.prisma.student.findUnique({
