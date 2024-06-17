@@ -9,11 +9,29 @@ export class StudentServiceAdmin {
   constructor(private readonly prisma: PrismaService) {}
 
   findAll() {
-    const students = this.prisma.student.findMany();
+    const students = this.prisma.student.findMany({
+      select:{
+        id: true,
+        name: true,
+        age: true,
+        login: true,
+        password: true,
+        isActive: true,
+        couratorId: true,
+        groupId: true,
+        _count:{
+          select:{
+            kiberones: true
+          }
+        }
+      }
+    });
     return students;
   }
 
   async create(body: CreateStudentDto) {
+    if (! (await this.prisma.parent.findUnique({where: {login: body.login}})))
+       {
     const student = await this.prisma.student.create({
       data: {
         ...body
@@ -21,21 +39,31 @@ export class StudentServiceAdmin {
     })
     return student;
   }
-
-  async getStudentResults(studentId: number) {
-    return this.prisma.testsResult.findMany({
-      where: { studentId },
-      include: {
-        test: true,
-      },
-    });
+  else {
+    throw new HttpException('Login is already exist in parent', HttpStatus.BAD_REQUEST);
   }
+}
 
   async findStudentById(id: number) {
     try {
       const student = await this.prisma.student.findUnique({
         where: {
           id: id
+        },
+        select:{
+          id: true,
+          name: true,
+          age: true,
+          login: true,
+          password: true,
+          isActive: true,
+          couratorId: true,
+          groupId: true,
+          _count:{
+            select:{
+              kiberones: true
+            }
+          }
         }
       })
       return student;

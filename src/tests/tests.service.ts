@@ -34,7 +34,9 @@ export class TestsService {
   }
 
   async findAll() {
-    return this.prisma.tests.findMany({ include: { testResults: true } });
+    return this.prisma.tests.findMany({
+       include: { testResults: true } 
+      });
   }
 
   async findOne(id: number) {

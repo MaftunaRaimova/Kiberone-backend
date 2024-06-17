@@ -15,6 +15,7 @@ import { AdminModule } from './admin/admin.module';
 // import { ServeStaticModule } from '@nestjs/serve-static';
 // import { join } from 'path';
 import { ItemModule } from './item/item.module';
+import { PollsModule } from './polls/polls.module';
 
 @Module({
   imports: [StudentModule,
@@ -26,7 +27,7 @@ import { ItemModule } from './item/item.module';
     LoginCouratorModule, 
     ParentModule, 
     HomeworkModule, 
-    AdminModule, ItemModule,
+    AdminModule, ItemModule, PollsModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],

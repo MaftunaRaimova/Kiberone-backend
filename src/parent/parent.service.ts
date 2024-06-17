@@ -8,6 +8,7 @@ export class ParentService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(body: CreateParentDto) {
+    if (!(await this.prisma.student.findUnique({ where: { login: body.login } }))) {
     const parent = await this.prisma.parent.create({
       data: {
         ...body
@@ -15,7 +16,7 @@ export class ParentService {
     })
     return parent;
   }
-
+  }
   async findAllParent() {
     const parent = await this.prisma.parent.findMany();
     return parent;
