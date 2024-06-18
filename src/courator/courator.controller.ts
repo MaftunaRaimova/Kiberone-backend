@@ -4,6 +4,7 @@ import { CreateCouratorDto } from './dto/create-courator.dto';
 import { UpdateCouratorDto } from './dto/update-courator.dto';
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/admin/admin.guard';
+import { group } from 'console';
 
 @UseGuards(AdminGuard)
 @ApiBearerAuth()
@@ -19,7 +20,8 @@ export class CouratorController {
       properties: {
         name: { type: 'string' },
         login: { type: 'string' },
-        password: { type: 'string'}
+        password: { type: 'string'},
+        groupsId: { type: 'number'}
       },
     },
    })
@@ -47,7 +49,8 @@ export class CouratorController {
       properties: {
         name: { type: 'string' },
         login: { type: 'string' },
-        password: { type: 'string'}
+        password: { type: 'string'},
+        groupId: { type: 'number'}
       },
     },
    })

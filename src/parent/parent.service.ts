@@ -18,7 +18,29 @@ export class ParentService {
   }
   }
   async findAllParent() {
-    const parent = await this.prisma.parent.findMany();
+    const parent = await this.prisma.parent.findMany({
+      select:{
+        id: true,
+        name: true,
+        login: true,
+        password: true,
+        students: {
+          select: {
+            id: true,
+            name: true,
+            age: true,
+            login: true,
+            password: true,
+            isActive: true,
+            _count: {
+              select: {
+                kiberones: true, 
+              },
+            },
+          },
+        },
+      }
+    });
     return parent;
   }
 
@@ -28,6 +50,27 @@ export class ParentService {
       const parent = await this.prisma.parent.findUnique({
         where: {
           id: id
+        },
+        select:{
+          id: true,
+          name: true,
+          login: true,
+          password: true,
+          students: {
+            select: {
+              id: true,
+              name: true,
+              age: true,
+              login: true,
+              password: true,
+              isActive: true,
+              _count: {
+                select: {
+                  kiberones: true, 
+                },
+              },
+            },
+          },
         }
       })
       return parent;

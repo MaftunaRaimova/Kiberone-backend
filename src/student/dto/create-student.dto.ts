@@ -6,5 +6,6 @@ export class CreateStudentDto {
     isActive: boolean;
     couratorId: number;
     groupId: number;
+    parentId: number;
 }
 

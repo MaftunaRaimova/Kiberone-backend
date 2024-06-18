@@ -17,8 +17,8 @@ export class StudentServiceAdmin {
         login: true,
         password: true,
         isActive: true,
-        couratorId: true,
         groupId: true,
+        parentId: true,
         _count:{
           select:{
             kiberones: true
@@ -57,8 +57,8 @@ export class StudentServiceAdmin {
           login: true,
           password: true,
           isActive: true,
-          couratorId: true,
           groupId: true,
+          parentId: true,
           _count:{
             select:{
               kiberones: true

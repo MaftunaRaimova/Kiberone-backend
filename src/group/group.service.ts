@@ -14,7 +14,6 @@ export class GroupService {
         id: true,
         name: true,
         description: true,
-        couratorId: true,
         students:{
           select:{
             id: true,
@@ -23,6 +22,20 @@ export class GroupService {
             login: true,
             password: true,
             isActive: true,
+            _count:{
+              select:{
+                kiberones: true
+              }
+            }
+          }
+        
+        },
+        courator: {
+          select:{
+            id: true,
+            name: true,
+            login: true,
+            password: true,
             _count:{
               select:{
                 kiberones: true
@@ -46,7 +59,6 @@ export class GroupService {
           id: true,
           name: true,
           description: true,
-          couratorId: true,
           students:{
             select:{
               id: true,
@@ -55,6 +67,20 @@ export class GroupService {
               login: true,
               password: true,
               isActive: true,
+              _count:{
+                select:{
+                  kiberones: true
+                }
+              }
+            }
+          
+          },
+          courator: {
+            select:{
+              id: true,
+              name: true,
+              login: true,
+              password: true,
               _count:{
                 select:{
                   kiberones: true
@@ -78,7 +104,9 @@ export class GroupServiceAdmin extends GroupService{
   async create(body: CreateGroupDto) {
     const group = await this.prisma.group.create({
       data: {
-        ...body
+        name: body.name,
+        description: body.description,
+        couratorId: body.couratorId
       }
     })
     return group;

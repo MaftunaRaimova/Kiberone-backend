@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { TestsService } from './tests.service';
-import { CreateTestDto } from './dto/create-test.dto';
+import { CreateResultDto, CreateTestDto } from './dto/create-test.dto';
 import { UpdateTestDto } from './dto/update-test.dto';
 import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/admin/admin.guard';
@@ -20,13 +20,28 @@ export class TestsController {
         answer: { type: 'array', items: { type: 'string' } },
         correctAnswer: { type: 'number' },
         deadline: { type: 'string', format: 'date-time' },
-        studentId: { type: 'number' }, // Добавляем studentId
+        groupId: { type: 'number' }, 
       },
     },
   })
   @Post()
   create(@Body() body: CreateTestDto) {
     return this.testsService.create(body);
+  }
+
+  @ApiBody({
+    schema:{
+      type: 'object',
+      properties:{
+        testId: { type: 'number' },
+        studentId: { type: 'number' },
+        testIndex: { type: 'number' }
+      }
+    }
+  })
+  @Post('result')
+  createResult(@Body() body: CreateResultDto){
+    return this.testsService.createResult(body);
   }
 
   @Get()

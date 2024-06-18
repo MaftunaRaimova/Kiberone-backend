@@ -1,8 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, ParseIntPipe } from '@nestjs/common';
 import { StudentServiceAdmin } from './student.service';
 import { CreateStudentDto } from './dto/create-student.dto';
 import { UpdateStudentDto } from './dto/update-student.dto';
-import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/admin/admin.guard';
 
 @UseGuards(AdminGuard)
@@ -20,9 +20,10 @@ export class StudentControllerAdmin {
         age: { type: 'number' },
         login: { type: 'string' },
         password: { type: 'string' },
-        isActive: { type: 'string' },
+        isActive: { type: 'boolean' },
         couratorId: { type: 'number' },
-        groupId: { type: 'number'}
+        groupId: { type: 'number'},
+        parentId: { type: 'number'}
       },
     },
   })
@@ -48,7 +49,7 @@ export class StudentControllerAdmin {
     return this.studentServiceAdmin.findStudentById(+id);
   }
 
-  @Patch(':id') 
+  
   @ApiBody({
     schema: {
       type: 'object',
@@ -57,18 +58,20 @@ export class StudentControllerAdmin {
         age: { type: 'number' },
         login: { type: 'string' },
         password: { type: 'string' },
-        isActive: { type: 'string' },
+        isActive: { type: 'boolean' },
         couratorId: { type: 'number' },
-        groupId: { type: 'number'}
+        groupId: { type: 'number'},
+        parentId: { type: 'number'}
       },
     },
   })
-  async updateGroup(
-  @Param('id') id: string,
-  @Body() body: UpdateStudentDto
- ) {
-  return this.studentServiceAdmin.updateStudent(+id, body);
- }
+  @Patch(':id')
+  updateStudent(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() body: UpdateStudentDto,
+  ) {
+    return this.studentServiceAdmin.updateStudent(id, body);
+  }
 
   @Delete(':id')
   remove(@Param('id') id: string) {

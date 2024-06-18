@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, HttpException, HttpStatus } from '@nestjs/common';
 import { GroupService, GroupServiceAdmin } from './group.service';
 import { CreateGroupDto } from './dto/create-group.dto';
 import { UpdateGroupDto } from './dto/update-group.dto';
@@ -35,20 +35,20 @@ export class GroupControllerAdmin{
       properties: {
         name: { type: 'string' },
         description: { type: 'string' },
-        couratorId: { type: 'number' },
+        couratorId: { type: 'number'}
       },
     },
   })
 
   @Post()
-    async addStudent(
-      @Body()
-      body: CreateGroupDto,
-
-    )
-  {
-    return this.groupServiceAdmin.create(body);
+  async addGroup(@Body() body: CreateGroupDto) {
+    try {
+      return await this.groupServiceAdmin.create(body);
+    } catch (error) {
+      throw new HttpException('Не удалось создать группу', HttpStatus.BAD_REQUEST);
+    }
   }
+  
   @Patch(':id') 
   @ApiBody({
     schema: {
