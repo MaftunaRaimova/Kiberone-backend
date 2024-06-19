@@ -2,32 +2,16 @@ import {PrismaClient} from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-async function main() {
-    const newCourator = await prisma.courator.create({
-        data:{
-            name: 'Maftuna',
-            login: 'Maftuna2003',
-            password: '123456',
-            groups:{
-                create:{
-                    name: 'A',
-                    description: 'This is group A',
-                    students:{
-                        create:{
-                            name: 'Komila',
-                            age: 21,
-                            login: 'Komila1',
-                            password: '123456',
-                            isActive: true,
-                            parentId: 1
-                        }
-                    }
-                }
-            }
-        }
-    })
-    return newCourator;
-}
+// async function main() {
+//     const newCourator = await prisma.courator.create({
+//         data:{
+//             name: 'Dilfuza',
+//             login: 'Dilfuza1',
+//             password: '123456'
+//         }
+//     })
+//     return newCourator;
+// }
 
 // async function student(){
 //     const newStudent = await prisma.student.create({
@@ -98,12 +82,12 @@ async function main() {
 
 
 
-main().catch(e => {
-    console.log(e);
-    process.exit(1);
-}).finally(() => {
-    prisma.$disconnect();
-})
+// main().catch(e => {
+//     console.log(e);
+//     process.exit(1);
+// }).finally(() => {
+//     prisma.$disconnect();
+// })
 
 // student().catch(e => {
 //     console.log(e);

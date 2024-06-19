@@ -13,8 +13,7 @@ model Courator {
   name         String      
   login        String      @unique
   password     String
-  groups       Group[]
-  groupsId     Int[]
+  groups       GroupCourator[]     
   kiberones    Kiberone[]  // Обратное поле отношения для связи с моделью Kiberone
   createdAt    DateTime    @default(now())
 }
@@ -24,13 +23,24 @@ model Group {
   name         String
   description  String?
   students     Student[]
-  courator     Courator[] 
-  couratorId   Int[] 
+  courators    GroupCourator[] 
   homework     Homework[]
   tests        Tests[]
   createdAt    DateTime    @default(now())
   updatedAt    DateTime?   @updatedAt
 }
+
+// Промежуточная таблица для отношения "many-to-many" между моделями Courator и Group
+model GroupCourator {
+  groupId      Int
+  couratorId   Int
+  group        Group       @relation(fields: [groupId], references: [id])
+  courator     Courator    @relation(fields: [couratorId], references: [id])
+  createdAt    DateTime    @default(now())
+
+  @@id([groupId, couratorId])
+}
+
 
 model Kiberone {
   id           Int         @id @default(autoincrement())
@@ -75,7 +85,7 @@ model Student {
 
 model Limits {
   id          Int         @id @default(autoincrement())
-  name        String
+  reason      String
   limits      Int[]
   createdAt   DateTime    @default(now())
   updatedAt   DateTime?   @updatedAt

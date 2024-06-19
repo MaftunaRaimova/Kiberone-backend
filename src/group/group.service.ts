@@ -8,45 +8,10 @@ import { PrismaService } from '../prisma.service';
 export class GroupService {
   constructor(public readonly prisma: PrismaService) {}
   
-  findAll() {
-    const group = this.prisma.group.findMany({
-      select:{
-        id: true,
-        name: true,
-        description: true,
-        students:{
-          select:{
-            id: true,
-            name: true,
-            age: true,
-            login: true,
-            password: true,
-            isActive: true,
-            _count:{
-              select:{
-                kiberones: true
-              }
-            }
-          }
-        
-        },
-        courator: {
-          select:{
-            id: true,
-            name: true,
-            login: true,
-            password: true,
-            _count:{
-              select:{
-                kiberones: true
-              }
-            }
-          }
-        
-        }
-      }
-    })
-    return group;
+  async findAll() {
+    return this.prisma.group.findMany({
+      include: { courators: { include: { courator: true } } },
+    });
   }
   
   async findGroupById(id: number) {
@@ -55,41 +20,7 @@ export class GroupService {
         where: {
           id: id
         },
-        select:{
-          id: true,
-          name: true,
-          description: true,
-          students:{
-            select:{
-              id: true,
-              name: true,
-              age: true,
-              login: true,
-              password: true,
-              isActive: true,
-              _count:{
-                select:{
-                  kiberones: true
-                }
-              }
-            }
-          
-          },
-          courator: {
-            select:{
-              id: true,
-              name: true,
-              login: true,
-              password: true,
-              _count:{
-                select:{
-                  kiberones: true
-                }
-              }
-            }
-          
-          }
-        }
+        include: { courators: { include: { courator: true } } } // have to check this line 
       })
       return group;
     } catch (error) {
@@ -102,14 +33,22 @@ export class GroupService {
 export class GroupServiceAdmin extends GroupService{
 
   async create(body: CreateGroupDto) {
-    const group = await this.prisma.group.create({
-      data: {
-        name: body.name,
-        description: body.description,
-        couratorId: body.couratorId
-      }
-    })
-    return group;
+    try {
+      const group = await this.prisma.group.create({
+        data: {
+          name: body.name,
+          description: body.description,
+          courators: {
+            create: body.couratorIds.map((id) => ({
+              courator: { connect: { id } },
+            })),
+          },
+        },
+      });
+      return group;
+    } catch (error) {
+      throw new Error(`Failed to create group: ${error.message}`);
+    }
   }
 
   async updateGroup(id: number, body: UpdateGroupDto) {

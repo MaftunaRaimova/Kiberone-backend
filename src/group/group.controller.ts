@@ -35,7 +35,7 @@ export class GroupControllerAdmin{
       properties: {
         name: { type: 'string' },
         description: { type: 'string' },
-        couratorId: { type: 'number'}
+        couratorIds: { type: 'number'}
       },
     },
   })
@@ -48,7 +48,7 @@ export class GroupControllerAdmin{
       throw new HttpException('Не удалось создать группу', HttpStatus.BAD_REQUEST);
     }
   }
-  
+
   @Patch(':id') 
   @ApiBody({
     schema: {
@@ -56,7 +56,7 @@ export class GroupControllerAdmin{
       properties: {
         name: { type: 'string' },
         description: { type: 'string' },
-        couratorId: { type: 'number' },
+        couratorIds: { type: 'number' },
       },
     },
   })

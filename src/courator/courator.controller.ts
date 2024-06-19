@@ -21,7 +21,7 @@ export class CouratorController {
         name: { type: 'string' },
         login: { type: 'string' },
         password: { type: 'string'},
-        groupsId: { type: 'number'}
+        groupsIds: { type: 'number'}
       },
     },
    })
@@ -50,7 +50,7 @@ export class CouratorController {
         name: { type: 'string' },
         login: { type: 'string' },
         password: { type: 'string'},
-        groupId: { type: 'number'}
+        groupIds: { type: 'number'}
       },
     },
    })

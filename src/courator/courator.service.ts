@@ -8,46 +8,29 @@ export class CouratorService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(body: CreateCouratorDto) {
-    const courator = await this.prisma.courator.create({
-      data: {
-        ...body
-      }
-    })
-    return courator;
+    try {
+      const courator = await this.prisma.courator.create({
+        data: {
+          name: body.name,
+          login: body.login,
+          password: body.password,
+          groups: {
+            create: body.groupIds.map((id) => ({
+              group: { connect: { id } },
+            })),
+          },
+        },
+      });
+      return courator;
+    } catch (error) {
+      throw new Error(`Failed to create courator: ${error.message}`);
+    }
   }
 
   async findAllCourator() {
-    const courator = await this.prisma.courator.findMany({
-      select: {
-        id: true,
-        name: true,
-        login: true,
-        password: true,
-        groups: {
-          select: {
-            id: true,
-            name: true,
-            description: true,
-            students: {
-              select: {
-                id: true,
-                name: true,
-                age: true,
-                login: true,
-                password: true,
-                isActive: true,
-                _count: {
-                  select: {
-                    kiberones: true, 
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    });
-    return courator;
+    return this.prisma.courator.findMany({
+      include:{ groups: {include :{group: true}}}
+    })
   }
   
   async findCouratorById(id: number) {
@@ -56,34 +39,7 @@ export class CouratorService {
         where: {
           id: id,
         },
-        select: {
-          id: true,
-          name: true,
-          login: true,
-          password: true,
-          groups: {
-            select: {
-              id: true,
-              name: true,
-              description: true,
-              students: {
-                select: {
-                  id: true,
-                  name: true,
-                  age: true,
-                  login: true,
-                  password: true,
-                  isActive: true,
-                  _count: {
-                    select: {
-                      kiberones: true,
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
+        include:{ groups: {include :{group: true}}} // have to check this line
       });
       if (!courator) {
         throw new HttpException('Courator not found', HttpStatus.NOT_FOUND);
