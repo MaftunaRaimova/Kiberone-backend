@@ -70,6 +70,7 @@ export class TestsService {
   }
 
   async remove(id: number) {
-    await this.prisma.tests.delete({ where: { id: id}})
+    await this.prisma.testsResult.deleteMany({ where: { testId: id } });
+    await this.prisma.tests.deleteMany({ where: { id: id}})
   }
 }
