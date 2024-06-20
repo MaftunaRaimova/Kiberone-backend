@@ -54,7 +54,7 @@ export class TestsController {
     return this.testsService.findOne(+id);
   }
 
-  @Delete(':id')
+  @Delete(':id')// not working
   remove(@Param('id') id: string) {
     return this.testsService.remove(+id);
   }

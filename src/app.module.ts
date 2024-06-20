@@ -16,6 +16,7 @@ import { AdminModule } from './admin/admin.module';
 // import { join } from 'path';
 import { ItemModule } from './item/item.module';
 import { PollsModule } from './polls/polls.module';
+import { LimitsModule } from './limits/limits.module';
 
 @Module({
   imports: [StudentModule,
@@ -27,7 +28,7 @@ import { PollsModule } from './polls/polls.module';
     LoginCouratorModule, 
     ParentModule, 
     HomeworkModule, 
-    AdminModule, ItemModule, PollsModule,
+    AdminModule, ItemModule, PollsModule, LimitsModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],

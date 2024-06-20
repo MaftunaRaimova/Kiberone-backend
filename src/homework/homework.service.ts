@@ -32,7 +32,7 @@ export class HomeworkService {
 
 
   async findOne(id: number) {
-    const homework = await this.prisma.homework.findUnique({
+    return await this.prisma.homework.findUnique({
       where: {
         id: id,
       },
@@ -71,8 +71,9 @@ export class HomeworkServiceAdmin extends HomeworkService{
     }
   }
 
-  async updateHomework(id: number, body: UpdateHomeworkDto) {
+  async updateHomework(body: UpdateHomeworkDto) {
     try {
+      const id = +body.id;
       return await this.prisma.homework.update({
         where: {
           id: id,

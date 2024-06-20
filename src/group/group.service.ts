@@ -10,7 +10,15 @@ export class GroupService {
   
   async findAll() {
     return this.prisma.group.findMany({
-      include: { courators: { include: { courator: true } } },
+      include: {
+        homework:{
+          select:{
+            id : true,
+            title: true,
+            deadline: true,
+          }
+        },
+        courators: { include: { courator: true } } },
     });
   }
   
@@ -18,13 +26,29 @@ export class GroupService {
     try {
       const group = await this.prisma.group.findUnique({
         where: {
-          id: id
+          id: id,
         },
-        include: { courators: { include: { courator: true } } } // have to check this line 
-      })
+        include: {
+          homework:{
+            select:{
+              id : true,
+              title: true,
+              deadline: true,
+            }
+          },
+          courators: {
+            include: {
+              courator: true,
+            },
+          },
+        },
+      });
+      if (!group) {
+        throw new HttpException('Group not found', HttpStatus.NOT_FOUND);
+      }
       return group;
     } catch (error) {
-      throw new HttpException('Failed to update group', HttpStatus.BAD_REQUEST);
+      throw new HttpException('Failed to find group', HttpStatus.BAD_REQUEST);
     }
   }
 
@@ -51,32 +75,60 @@ export class GroupServiceAdmin extends GroupService{
     }
   }
 
-  async updateGroup(id: number, body: UpdateGroupDto) {
+  async updateGroup(body: UpdateGroupDto) {
     try {
+      const id = +body.id;
       const group = await this.prisma.group.update({
         where: {
-          id: id
+          id: id,
         },
         data: {
-          ...body
-        }
-      })
+          name: body.name,
+          description: body.description,
+        },
+      });
+      
+      await this.prisma.groupCourator.deleteMany({
+        where: {
+          groupId: id,
+        },
+      });
+      await this.prisma.groupCourator.createMany({
+        data: body.couratorIds.map((couratorId) => ({
+          groupId: id,
+          couratorId: couratorId,
+        })),
+      });
+      
       return group;
     } catch (error) {
-      throw new HttpException('Failed to update group', HttpStatus.BAD_REQUEST);
+      throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
   }
 
-  async remove(id: number) {
+  async remove(couratorId: number, groupId: number) {
+    try {
+      const groupCourator = await this.prisma.groupCourator.deleteMany({
+        where: {
+          couratorId,
+          groupId,
+        },
+      });
+      return groupCourator;
+    } catch (error) {
+      throw new HttpException(error.message ?? 'Failed to remove groupCourator', HttpStatus.BAD_REQUEST);
+    }
+  }
+  async removeGroup(groupId: number) {
     try {
       const group = await this.prisma.group.delete({
         where: {
-          id: id
-        }
-      })
+          id: groupId,
+        },
+      });
       return group;
     } catch (error) {
-      throw new HttpException('Failed to delete group', HttpStatus.BAD_REQUEST);
+      throw new HttpException(error.message ?? 'Failed to remove group', HttpStatus.BAD_REQUEST);
     }
   }
 }

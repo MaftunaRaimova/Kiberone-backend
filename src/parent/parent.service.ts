@@ -8,15 +8,31 @@ export class ParentService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(body: CreateParentDto) {
-    if (!(await this.prisma.student.findUnique({ where: { login: body.login } }))) {
+    // Проверить, существует ли логин у студентов
+    const studentWithSameLogin = await this.prisma.student.findUnique({
+      where: { login: body.login },
+    });
+
+    // Проверить, существует ли логин у родителей
+    const parentWithSameLogin = await this.prisma.parent.findUnique({
+      where: { login: body.login },
+    });
+
+    // Если логин найден у студента или другого родителя, выбросить исключение
+    if (studentWithSameLogin || parentWithSameLogin) {
+      throw new HttpException('Login already exists', HttpStatus.BAD_REQUEST);
+    }
+
+    // Создать родителя, если логин уникален
     const parent = await this.prisma.parent.create({
       data: {
-        ...body
-      }
-    })
+        ...body,
+      },
+    });
+
     return parent;
   }
-  }
+
   async findAllParent() {
     const parent = await this.prisma.parent.findMany({
       select:{
@@ -80,11 +96,11 @@ export class ParentService {
   }
     
 
-  async updateParent(id: number, body: UpdateParentDto) {
+  async updateParent(body: UpdateParentDto) {
     try {
       const parent = await this.prisma.parent.update({
         where: {
-          id: id
+          id: +body.id
         },
         data: {
           ...body

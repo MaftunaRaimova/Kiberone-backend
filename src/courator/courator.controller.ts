@@ -21,11 +21,11 @@ export class CouratorController {
         name: { type: 'string' },
         login: { type: 'string' },
         password: { type: 'string'},
-        groupsIds: { type: 'number'}
+        groupIds: { type: 'array', items: {type: 'number'} },
       },
     },
    })
-  @Post()
+  @Post('')
   async addCourator(@Body() body: CreateCouratorDto) {
     return this.couratorService.create(body);
   }
@@ -47,21 +47,35 @@ export class CouratorController {
     schema: {
       type: 'object',
       properties: {
+        id: { type: 'number' },
         name: { type: 'string' },
         login: { type: 'string' },
         password: { type: 'string'},
-        groupIds: { type: 'number'}
+        groupIds: { type: 'array', items: {type: 'number'}}
       },
     },
    })
-  @Patch(':id')
-  async updateCourator(@Param('id') id: string, @Body() body: UpdateCouratorDto) {
-    return this.couratorService.updateCourator(+id, body);
-  }
+  @Patch('')
+   async updateCourator(
+    @Body() body: UpdateCouratorDto
+   ) {
+    return this.couratorService.updateCourator(body);
+   }
 
   @ApiOperation({ summary: 'Delete courator by ID' })
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.couratorService.remove(+id);
-  }
+  @Delete(':groupId/:couratorId')
+async remove(
+  @Param('groupId') groupId: string,
+  @Param('couratorId') couratorId: string
+  
+) {
+  return this.couratorService.remove( +groupId,+couratorId,);
+}
+
+@Delete(':couratorId')
+async removeGroup(
+  @Param('couratorId') couratorId: string
+) {
+  return this.couratorService.removeCourator(+couratorId);
+}
 }

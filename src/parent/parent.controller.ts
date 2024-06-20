@@ -41,6 +41,7 @@ export class ParentController {
     schema: {
       type: 'object',
       properties: {
+        id: { type: 'number' },
         name: { type: 'string' },
         login: { type: 'string' },
         password: { type: 'string' },
@@ -48,8 +49,8 @@ export class ParentController {
     },
   })
   @Patch(':id')
-  update(@Param('id') id: string, @Body() body: UpdateParentDto) {
-    return this.parentService.updateParent(+id, body);
+  update(@Body() body: UpdateParentDto) {
+    return this.parentService.updateParent(body);
   }
 
   @Delete(':id')

@@ -21,7 +21,6 @@ export class StudentControllerAdmin {
         login: { type: 'string' },
         password: { type: 'string' },
         isActive: { type: 'boolean' },
-        couratorId: { type: 'number' },
         groupId: { type: 'number'},
         parentId: { type: 'number'}
       },
@@ -48,29 +47,48 @@ export class StudentControllerAdmin {
   findOne(@Param('id') id: string) {
     return this.studentServiceAdmin.findStudentById(+id);
   }
-
   
   @ApiBody({
     schema: {
       type: 'object',
       properties: {
+        id: { type: 'number' },
         name: { type: 'string' },
         age: { type: 'number' },
         login: { type: 'string' },
         password: { type: 'string' },
         isActive: { type: 'boolean' },
-        couratorId: { type: 'number' },
         groupId: { type: 'number'},
         parentId: { type: 'number'}
       },
     },
   })
-  @Patch(':id')
+  @Patch(':id/admin')
+  @ApiOperation({summary: 'Update student for ADMIN'})
   updateStudent(
-    @Param('id', ParseIntPipe) id: number,
     @Body() body: UpdateStudentDto,
   ) {
-    return this.studentServiceAdmin.updateStudent(id, body);
+    return this.studentServiceAdmin.updateStudent(body);
+  }
+
+  @ApiBody({
+    schema: {
+      type: 'object',
+      properties: {
+        id: { type: 'number' },
+        name: { type: 'string' },
+        age: { type: 'number' },
+        login: { type: 'string' },
+        password: { type: 'string' }
+      },
+    },
+  })
+  @Patch(':id/student')
+  @ApiOperation({summary: 'Update student for STUDENT'})
+  updateMe(
+    @Body() body: UpdateStudentDto,
+  ) {
+    return this.studentServiceAdmin.updateMe(body);
   }
 
   @Delete(':id')

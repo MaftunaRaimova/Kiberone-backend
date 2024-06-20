@@ -34,11 +34,11 @@ export class KiberoneService {
     }
   }
     
-  async updateKiberone(id: number, body: UpdateKiberoneDto) {
+  async updateKiberone(body: UpdateKiberoneDto) {
     try {
       const kiberone = await this.prisma.kiberone.update({
         where: {
-          id: id
+          id: +body.id
         },
         data: {
           ...body

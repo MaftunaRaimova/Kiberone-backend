@@ -32,16 +32,19 @@ export class HomeworkControllerAdmin {
     schema: {
       type: 'object',
       properties: {
+        id: { type: 'number' },
         title: { type: 'string' },
         deadline: { type: 'string', format: 'date-time' },
         groupId: { type: 'number' },
       },
     },
   })
-  @Patch(':id')
-  async update(@Param('id') id: string, @Body() body: UpdateHomeworkDto) {
-    return this.HomeworkServiceAdmin.updateHomework(+id, body);
-  }
+  @Patch('')
+   async updateHomework(
+    @Body() body: UpdateHomeworkDto
+   ) {
+    return this.HomeworkServiceAdmin.updateHomework(body);
+   }
 
   @Delete(':id')
   async remove(@Param('id') id: string) {

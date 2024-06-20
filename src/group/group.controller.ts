@@ -35,7 +35,7 @@ export class GroupControllerAdmin{
       properties: {
         name: { type: 'string' },
         description: { type: 'string' },
-        couratorIds: { type: 'number'}
+        couratorIds: { type: 'array', items: {type: 'number'} },
       },
     },
   })
@@ -49,26 +49,36 @@ export class GroupControllerAdmin{
     }
   }
 
-  @Patch(':id') 
+  @Patch('') 
   @ApiBody({
     schema: {
       type: 'object',
       properties: {
+        id: { type: 'number' },
         name: { type: 'string' },
         description: { type: 'string' },
-        couratorIds: { type: 'number' },
+        couratorIds: { type: 'array', items: {type: 'number'} },
       },
     },
   })
   async updateGroup(
-  @Param('id') id: string,
   @Body() body: UpdateGroupDto
  ) {
-  return this.groupServiceAdmin.updateGroup(+id, body);
+  return this.groupServiceAdmin.updateGroup(body);
  }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.groupServiceAdmin.remove(+id);
-  }
+  @Delete(':couratorId/:groupId')
+async remove(
+  @Param('couratorId') couratorId: string,
+  @Param('groupId') groupId: string
+) {
+  return this.groupServiceAdmin.remove(+couratorId, +groupId);
+}
+
+@Delete(':groupId')
+async removeGroup(
+  @Param('groupId') groupId: string
+) {
+  return this.groupServiceAdmin.removeGroup(+groupId);
+}
 }

@@ -20,7 +20,7 @@ export class KiberoneController {
         studentId: { type: 'number' },
         couratorId: { type: 'number' },
         reason: { type: 'string' },
-        status: { type: 'string'}
+        isApproved:{ type: 'boolean' , default: false}
       },
     },
   })
@@ -45,19 +45,15 @@ export class KiberoneController {
     schema: {
       type: 'object',
       properties: {
-        amount: { type: 'number' },
-        studentId: { type: 'number' },
-        couratorId: { type: 'number' },
-        reason: { type: 'string' },
-        status: { type: 'string'}
+        id: { type: 'number' },
+        isApproved: { type: 'boolean'}
       },
     },
   })
   async updateKiberone(
-  @Param('id') id: string,
   @Body() body: UpdateKiberoneDto
  ) {
-  return this.kiberoneService.updateKiberone(+id, body);
+  return this.kiberoneService.updateKiberone(body);
  }
 
   @Delete(':id')

@@ -4,7 +4,6 @@ export class CreateStudentDto {
     login: string;
     password: string;
     isActive: boolean;
-    couratorId: number;
     groupId: number;
     parentId: number;
 }
