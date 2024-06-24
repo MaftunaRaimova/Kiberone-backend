@@ -8,9 +8,10 @@ import { PrismaService } from '../prisma.service';
 export class StudentServiceAdmin {
   constructor(private readonly prisma: PrismaService) {}
 
-  findAll() {
-    const students = this.prisma.student.findMany({
-      select:{
+  async findAll() {
+    // Получение всех студентов
+    const students = await this.prisma.student.findMany({
+      select: {
         id: true,
         name: true,
         age: true,
@@ -19,18 +20,18 @@ export class StudentServiceAdmin {
         isActive: true,
         groupId: true,
         parentId: true,
-        group:{
-          select:{
+        group: {
+          select: {
             id: true,
             name: true,
             description: true,
-            courators:{
-              select:{
+            courators: {
+              select: {
                 couratorId: true
               }
             },
-            homework:{
-              select:{
+            homework: {
+              select: {
                 id: true,
                 title: true,
                 deadline: true
@@ -38,14 +39,33 @@ export class StudentServiceAdmin {
             }
           }
         },
-        _count:{
-          select:{
-            kiberones: true
-          },
-        }
       }
     });
-    return students;
+
+    // Получение суммы киберонов для каждого студента
+    const studentIds = students.map(student => student.id);
+    const kiberoneSums = await this.prisma.kiberone.groupBy({
+      by: ['studentId'],
+      _sum: {
+        amount: true,
+      },
+      where: {
+        studentId: { in: studentIds },
+        isApproved: true
+      }
+    });
+
+    // Создание мапы для быстрого доступа к суммам
+    const kiberoneSumMap = kiberoneSums.reduce((acc, kiberoneSum) => {
+      acc[kiberoneSum.studentId] = kiberoneSum._sum.amount || 0;
+      return acc;
+    }, {});
+
+    // Добавление суммы киберонов к каждому студенту
+    return students.map(student => ({
+      ...student,
+      totalKiberonePoints: kiberoneSumMap[student.id] || 0
+    }));
   }
 
   async create(body: CreateStudentDto) {
