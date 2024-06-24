@@ -11,28 +11,13 @@ export class GroupService {
   async findAll() {
     return this.prisma.group.findMany({
       include: {
-        homework:{
+        _count:{
           select:{
-            id : true,
-            title: true,
-            deadline: true,
+            homework: true ,
+            courators: true ,
+            students: true 
           }
-        },       
-        courators: { 
-          include: { 
-            courator: true 
-          } 
-        } ,
-        students:{
-          select:{
-            id: true,
-            name: true,
-            age: true,
-            login: true,
-            password: true,
-            parentId: true 
-          }
-        },
+        }
       },
     });
   }
