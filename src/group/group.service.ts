@@ -17,8 +17,23 @@ export class GroupService {
             title: true,
             deadline: true,
           }
+        },       
+        courators: { 
+          include: { 
+            courator: true 
+          } 
+        } ,
+        students:{
+          select:{
+            id: true,
+            name: true,
+            age: true,
+            login: true,
+            password: true,
+            parentId: true 
+          }
         },
-        courators: { include: { courator: true } } },
+      },
     });
   }
   
@@ -41,6 +56,17 @@ export class GroupService {
               courator: true,
             },
           },
+          students:{
+            select:{
+              id: true,
+              name: true,
+              age: true,
+              login: true,
+              password: true,
+              parentId: true 
+            }
+          },
+          
         },
       });
       if (!group) {
