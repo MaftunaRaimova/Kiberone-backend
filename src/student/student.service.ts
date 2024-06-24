@@ -90,52 +90,70 @@ export class StudentServiceAdmin {
     return student;
 }
 
-  async findStudentById(id: number) {
-    try {
-      const student = await this.prisma.student.findUnique({
-        where: {
-          id: id
-        },
-        select:{
-          id: true,
-          name: true,
-          age: true,
-          login: true,
-          password: true,
-          isActive: true,
-          groupId: true,
-          parentId: true,
-          group:{
-            select:{
-              id: true,
-              name: true,
-              description: true,
-              courators:{
-                select:{
-                  couratorId: true
-                }
-              },
-              homework:{
-                select:{
-                  id: true,
-                  title: true,
-                  deadline: true
-                }
+async findStudentById(id: number) {
+  try {
+    const student = await this.prisma.student.findUnique({
+      where: {
+        id: id
+      },
+      select: {
+        id: true,
+        name: true,
+        age: true,
+        login: true,
+        password: true,
+        isActive: true,
+        groupId: true,
+        parentId: true,
+        group: {
+          select: {
+            id: true,
+            name: true,
+            description: true,
+            courators: {
+              select: {
+                couratorId: true
+              }
+            },
+            homework: {
+              select: {
+                id: true,
+                title: true,
+                deadline: true
               }
             }
-          },
-          _count:{
-            select:{
-              kiberones: true
-            },
           }
         }
-      })
-      return student;
-    } catch (error) {
-      throw new HttpException('Failed to update student', HttpStatus.BAD_REQUEST);
+      }
+    });
+
+    if (!student) {
+      throw new HttpException('Student not found', HttpStatus.NOT_FOUND);
     }
+
+    // Получение суммы киберонов для конкретного студента
+    const kiberoneSum = await this.prisma.kiberone.aggregate({
+      _sum: {
+        amount: true,
+      },
+      where: {
+        studentId: id,
+        isApproved: true
+      }
+    });
+
+    const totalKiberonePoints = kiberoneSum._sum.amount || 0;
+
+    // Возвращение студента с суммой киберонов
+    return {
+      ...student,
+      totalKiberonePoints
+    };
+    
+  } catch (error) {
+    throw new HttpException('Failed to retrieve student', HttpStatus.BAD_REQUEST);
   }
+}
 
   async updateStudent(body: UpdateStudentDto) {
     try {
