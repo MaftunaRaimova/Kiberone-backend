@@ -9,7 +9,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('Kiberone')
     .setDescription('The Kiberone API description')
-    .setVersion('1.0')
+    .setVersion('0.2')
     .addBearerAuth({
       description: 'Enter your JWT token',
       // 'Admin: Admin',
