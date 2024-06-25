@@ -1,6 +1,7 @@
 export class CreateCouratorDto {
-    name: string;
-    login: string;
-    password: string;
-    groupIds: number[];
+  name: string;
+  login: string;
+  phone?: string;
+  password: string;
+  groupIds: number[];
 }

@@ -35,11 +35,15 @@ export class ParentService {
 
   async findAllParent() {
     const parent = await this.prisma.parent.findMany({
-      select:{
+      orderBy: {
+        id: 'desc',
+      },
+      select: {
         id: true,
         name: true,
         login: true,
         password: true,
+        phone: true,
         students: {
           select: {
             id: true,
@@ -50,24 +54,23 @@ export class ParentService {
             isActive: true,
             _count: {
               select: {
-                kiberones: true, 
+                kiberones: true,
               },
             },
           },
         },
-      }
+      },
     });
     return parent;
   }
 
-  
   async findParentById(id: number) {
     try {
       const parent = await this.prisma.parent.findUnique({
         where: {
-          id: id
+          id: id,
         },
-        select:{
+        select: {
           id: true,
           name: true,
           login: true,
@@ -82,33 +85,38 @@ export class ParentService {
               isActive: true,
               _count: {
                 select: {
-                  kiberones: true, 
+                  kiberones: true,
                 },
               },
             },
           },
-        }
-      })
+        },
+      });
       return parent;
     } catch (error) {
-      throw new HttpException('Failed to update parent', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        'Failed to update parent',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
-    
 
   async updateParent(body: UpdateParentDto) {
     try {
       const parent = await this.prisma.parent.update({
         where: {
-          id: +body.id
+          id: +body.id,
         },
         data: {
-          ...body
-        }
-      })
+          ...body,
+        },
+      });
       return parent;
     } catch (error) {
-      throw new HttpException('Failed to update parent', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        'Failed to update parent',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
 
@@ -116,13 +124,15 @@ export class ParentService {
     try {
       const parent = await this.prisma.parent.delete({
         where: {
-          id: id
-        }
-      })
+          id: id,
+        },
+      });
       return parent;
     } catch (error) {
-      throw new HttpException('Failed to delete parent', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        'Failed to delete parent',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
 }
-

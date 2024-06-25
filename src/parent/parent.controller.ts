@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  UseGuards,
+} from '@nestjs/common';
 import { ParentService } from './parent.service';
 import { CreateParentDto } from './dto/create-parent.dto';
 import { UpdateParentDto } from './dto/update-parent.dto';
@@ -18,6 +27,7 @@ export class ParentController {
       properties: {
         name: { type: 'string' },
         login: { type: 'string' },
+        phone: { type: 'string' },
         password: { type: 'string' },
       },
     },

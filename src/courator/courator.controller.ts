@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  UseGuards,
+} from '@nestjs/common';
 import { CouratorService } from './courator.service';
 import { CreateCouratorDto } from './dto/create-courator.dto';
 import { UpdateCouratorDto } from './dto/update-courator.dto';
@@ -20,11 +29,12 @@ export class CouratorController {
       properties: {
         name: { type: 'string' },
         login: { type: 'string' },
-        password: { type: 'string'},
-        groupIds: { type: 'array', items: {type: 'number'} },
+        password: { type: 'string' },
+        phone: { type: 'string' },
+        groupIds: { type: 'array', items: { type: 'number' } },
       },
     },
-   })
+  })
   @Post('')
   async addCourator(@Body() body: CreateCouratorDto) {
     return this.couratorService.create(body);
@@ -50,32 +60,27 @@ export class CouratorController {
         id: { type: 'number' },
         name: { type: 'string' },
         login: { type: 'string' },
-        password: { type: 'string'},
-        groupIds: { type: 'array', items: {type: 'number'}}
+        password: { type: 'string' },
+        groupIds: { type: 'array', items: { type: 'number' } },
       },
     },
-   })
+  })
   @Patch('')
-   async updateCourator(
-    @Body() body: UpdateCouratorDto
-   ) {
+  async updateCourator(@Body() body: UpdateCouratorDto) {
     return this.couratorService.updateCourator(body);
-   }
+  }
 
   @ApiOperation({ summary: 'Delete courator by ID' })
   @Delete(':groupId/:couratorId')
-async remove(
-  @Param('groupId') groupId: string,
-  @Param('couratorId') couratorId: string
-  
-) {
-  return this.couratorService.remove( +groupId,+couratorId,);
-}
+  async remove(
+    @Param('groupId') groupId: string,
+    @Param('couratorId') couratorId: string,
+  ) {
+    return this.couratorService.remove(+groupId, +couratorId);
+  }
 
-@Delete(':couratorId')
-async removeGroup(
-  @Param('couratorId') couratorId: string
-) {
-  return this.couratorService.removeCourator(+couratorId);
-}
+  @Delete(':couratorId')
+  async removeGroup(@Param('couratorId') couratorId: string) {
+    return this.couratorService.removeCourator(+couratorId);
+  }
 }

@@ -10,15 +10,25 @@ export class StudentServiceAdmin {
   async findAll() {
     // Получение всех студентов
     const students = await this.prisma.student.findMany({
+      orderBy: {
+        id: 'desc',
+      },
       select: {
         id: true,
         name: true,
         age: true,
         login: true,
         password: true,
+        phone: true,
+
         isActive: true,
-        groupId: true,
-        parentId: true,
+        parent: {
+          select: {
+            id: true,
+            name: true,
+            login: true,
+          },
+        },
         group: {
           select: {
             id: true,
@@ -85,7 +95,7 @@ export class StudentServiceAdmin {
     const student = await this.prisma.student.create({
       data: {
         ...body,
-        parentId: parent ? parent.id : null, // Установить parentId, если родитель найден
+        parentId: body.parentId || null,
       },
     });
 

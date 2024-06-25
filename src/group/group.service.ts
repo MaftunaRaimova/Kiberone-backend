@@ -3,25 +3,27 @@ import { CreateGroupDto } from './dto/create-group.dto';
 import { UpdateGroupDto } from './dto/update-group.dto';
 import { PrismaService } from '../prisma.service';
 
-
 @Injectable()
 export class GroupService {
   constructor(public readonly prisma: PrismaService) {}
-  
+
   async findAll() {
     return this.prisma.group.findMany({
+      orderBy: {
+        id: 'desc',
+      },
       include: {
-        _count:{
-          select:{
-            homework: true ,
-            courators: true ,
-            students: true 
-          }
-        }
+        _count: {
+          select: {
+            homework: true,
+            courators: true,
+            students: true,
+          },
+        },
       },
     });
   }
-  
+
   async findGroupById(id: number) {
     try {
       const group = await this.prisma.group.findUnique({
@@ -29,29 +31,28 @@ export class GroupService {
           id: id,
         },
         include: {
-          homework:{
-            select:{
-              id : true,
+          homework: {
+            select: {
+              id: true,
               title: true,
               deadline: true,
-            }
+            },
           },
           courators: {
             include: {
               courator: true,
             },
           },
-          students:{
-            select:{
+          students: {
+            select: {
               id: true,
               name: true,
               age: true,
               login: true,
               password: true,
-              parentId: true 
-            }
+              parentId: true,
+            },
           },
-          
         },
       });
       if (!group) {
@@ -62,11 +63,9 @@ export class GroupService {
       throw new HttpException('Failed to find group', HttpStatus.BAD_REQUEST);
     }
   }
-
 }
 
-export class GroupServiceAdmin extends GroupService{
-
+export class GroupServiceAdmin extends GroupService {
   async create(body: CreateGroupDto) {
     try {
       const group = await this.prisma.group.create({
@@ -98,7 +97,7 @@ export class GroupServiceAdmin extends GroupService{
           description: body.description,
         },
       });
-      
+
       await this.prisma.groupCourator.deleteMany({
         where: {
           groupId: id,
@@ -110,7 +109,7 @@ export class GroupServiceAdmin extends GroupService{
           couratorId: couratorId,
         })),
       });
-      
+
       return group;
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
@@ -127,7 +126,10 @@ export class GroupServiceAdmin extends GroupService{
       });
       return groupCourator;
     } catch (error) {
-      throw new HttpException(error.message ?? 'Failed to remove groupCourator', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        error.message ?? 'Failed to remove groupCourator',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
   async removeGroup(groupId: number) {
@@ -139,8 +141,10 @@ export class GroupServiceAdmin extends GroupService{
       });
       return group;
     } catch (error) {
-      throw new HttpException(error.message ?? 'Failed to remove group', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        error.message ?? 'Failed to remove group',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
 }
-  

@@ -14,6 +14,8 @@ export class CouratorService {
           name: body.name,
           login: body.login,
           password: body.password,
+          phone: body.phone,
+
           groups: {
             create: body.groupIds.map((id) => ({
               group: { connect: { id } },
@@ -29,17 +31,21 @@ export class CouratorService {
 
   async findAllCourator() {
     return this.prisma.courator.findMany({
-      include:{ 
-        _count:{
-          select:{
-            kiberones: true
-          }
-        },
-        groups: {include :{group: true}}
+      orderBy: {
+        id: 'desc',
       },
-    })
+      include: {
+        _count: {
+          select: {
+            groups: true,
+            kiberones: true,
+          },
+        },
+        groups: { include: { group: true } },
+      },
+    });
   }
-  
+
   async findCouratorById(id: number) {
     try {
       const courator = await this.prisma.courator.findUnique({
@@ -47,10 +53,10 @@ export class CouratorService {
           id: id,
         },
         include: {
-          _count:{
-            select:{
-              kiberones: true
-            }
+          _count: {
+            select: {
+              kiberones: true,
+            },
           },
           groups: {
             include: {
@@ -64,10 +70,13 @@ export class CouratorService {
       }
       return courator;
     } catch (error) {
-      throw new HttpException('Failed to find courator', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        'Failed to find courator',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
-  
+
   async updateCourator(body: UpdateCouratorDto) {
     try {
       const id = +body.id;
@@ -81,7 +90,7 @@ export class CouratorService {
           password: body.password,
         },
       });
-      
+
       await this.prisma.groupCourator.deleteMany({
         where: {
           couratorId: id,
@@ -93,14 +102,14 @@ export class CouratorService {
           groupId: groupId,
         })),
       });
-      
+
       return courator;
     } catch (error) {
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
     }
   }
 
-  async remove( groupId: number, couratorId: number) {
+  async remove(groupId: number, couratorId: number) {
     try {
       const groupCourator = await this.prisma.groupCourator.deleteMany({
         where: {
@@ -110,7 +119,10 @@ export class CouratorService {
       });
       return groupCourator;
     } catch (error) {
-      throw new HttpException(error.message ?? 'Failed to remove groupCourator', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        error.message ?? 'Failed to remove groupCourator',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
   async removeCourator(couratorId: number) {
@@ -122,7 +134,10 @@ export class CouratorService {
       });
       return courator;
     } catch (error) {
-      throw new HttpException(error.message ?? 'Failed to remove courator', HttpStatus.BAD_REQUEST);
+      throw new HttpException(
+        error.message ?? 'Failed to remove courator',
+        HttpStatus.BAD_REQUEST,
+      );
     }
   }
 }
