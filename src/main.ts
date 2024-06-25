@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+import * as cookieParser from 'cookie-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -11,7 +12,7 @@ async function bootstrap() {
     .setVersion('1.0')
     .addBearerAuth({
       description: 'Enter your JWT token',
-       // 'Admin: Admin',
+      // 'Admin: Admin',
       type: 'http',
       scheme: 'bearer',
       bearerFormat: 'JWT',
@@ -19,7 +20,7 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-
+  app.use(cookieParser());
   await app.listen(3001);
 }
 bootstrap();

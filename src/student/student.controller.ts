@@ -5,8 +5,8 @@ import { UpdateStudentDto } from './dto/update-student.dto';
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/admin/admin.guard';
 
-@UseGuards(AdminGuard)
-@ApiBearerAuth()
+// @UseGuards(AdminGuard)
+// @ApiBearerAuth()
 @ApiTags('Student', 'Admin')
 @Controller('student')
 export class StudentControllerAdmin {

@@ -6,8 +6,8 @@ import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/admin/admin.guard';
 import { group } from 'console';
 
-@UseGuards(AdminGuard)
-@ApiBearerAuth()
+// @UseGuards(AdminGuard)
+// @ApiBearerAuth()
 @ApiTags('Courator')
 @Controller('courator')
 export class CouratorController {
