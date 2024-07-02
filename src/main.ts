@@ -14,7 +14,7 @@ async function bootstrap() {
     .setTitle('Kiberone')
     .setDescription('The Kiberone API description')
     .setVersion('0.2')
-    .addServer('api')
+    // .addServer('api')
     .addBearerAuth({
       description: 'Enter your JWT token',
       type: 'http',
