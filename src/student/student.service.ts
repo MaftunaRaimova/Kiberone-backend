@@ -77,6 +77,81 @@ export class StudentServiceAdmin {
     }));
   }
 
+  async findStudentByCouratorId(id: number) {
+    // Найти все группы куратора
+    const groups = await this.prisma.groupCourator.findMany({
+      where: {
+        couratorId: id,
+      },
+      select: {
+        groupId: true,
+      },
+    });
+
+    // Найти всех студентов групп
+    const students = await this.prisma.student.findMany({
+      where: {
+        groupId: {
+          in: groups.map((group) => group.groupId),
+        },
+      },
+      select: {
+        id: true,
+        name: true,
+        age: true,
+        login: true,
+        password: true,
+        phone: true,
+        isActive: true,
+        parentId: true,
+        group: {
+          select: {
+            id: true,
+            name: true,
+            description: true,
+            courators: {
+              select: {
+                couratorId: true,
+              },
+            },
+            homework: {
+              select: {
+                id: true,
+                title: true,
+                deadline: true,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // Получение суммы киберонов для каждого студента
+    const studentIds = students.map((student) => student.id);
+    const kiberoneSums = await this.prisma.kiberone.groupBy({
+      by: ['studentId'],
+      _sum: {
+        amount: true,
+      },
+      where: {
+        studentId: { in: studentIds },
+        isApproved: true,
+      },
+    });
+
+    // Создание мапы для быстрого доступа к суммам
+    const kiberoneSumMap = kiberoneSums.reduce((acc, kiberoneSum) => {
+      acc[kiberoneSum.studentId] = kiberoneSum._sum.amount || 0;
+      return acc;
+    }, {});
+
+    // Добавление суммы киберонов к каждому студенту
+    return students.map((student) => ({
+      ...student,
+      totalKiberonePoints: kiberoneSumMap[student.id] || 0,
+    }));
+  }
+
   async create(body: CreateStudentDto) {
     // Найти родителя по логину
     const parent = await this.prisma.parent.findUnique({
@@ -118,10 +193,15 @@ export class StudentServiceAdmin {
           groupId: true,
           parentId: true,
           kiberones: {
+            orderBy: {
+              createdAt: 'desc',
+            },
             select: {
               id: true,
               amount: true,
               isApproved: true,
+              reason: true,
+              createdAt: true,
             },
           },
           group: {
@@ -139,6 +219,7 @@ export class StudentServiceAdmin {
                   id: true,
                   title: true,
                   deadline: true,
+                  description: true,
                 },
               },
             },

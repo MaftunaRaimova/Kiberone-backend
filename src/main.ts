@@ -2,8 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import * as cookieParser from 'cookie-parser';
-
+// import * as fs from 'fs';
 async function bootstrap() {
+  // const httpsOptions = {
+  //   key: fs.readFileSync('./secret/create-cert+2-key.pem'),
+  //   cert: fs.readFileSync('./secret/create-cert+2.pem'),
+  // };
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
@@ -12,7 +16,6 @@ async function bootstrap() {
     .setVersion('0.2')
     .addBearerAuth({
       description: 'Enter your JWT token',
-      // 'Admin: Admin',
       type: 'http',
       scheme: 'bearer',
       bearerFormat: 'JWT',

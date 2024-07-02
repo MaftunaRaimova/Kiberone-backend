@@ -26,6 +26,11 @@ export class GroupController {
     return this.groupService.findAll();
   }
 
+  @Get('byCourator/:couratorId')
+  findAllbyCouratorl(@Param('couratorId') couratorId: string) {
+    return this.groupService.findAllbyCourator(+couratorId);
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.groupService.findGroupById(+id);

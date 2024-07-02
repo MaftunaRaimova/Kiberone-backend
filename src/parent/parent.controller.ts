@@ -42,6 +42,11 @@ export class ParentController {
     return this.parentService.findAllParent();
   }
 
+  @Get('byCourator/:id')
+  findByCourator(@Param('id') id: string) {
+    return this.parentService.findParentByCouratorId(+id);
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.parentService.findParentById(+id);

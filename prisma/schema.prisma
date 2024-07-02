@@ -140,24 +140,24 @@ model PollResults {
 }
 
 model Homework {
-  id        Int       @id @default(autoincrement())
-  title     String
-  deadline  DateTime
-  item      Item[]
-  group     Group     @relation(fields: [groupId], references: [id])
-  groupId   Int
-  createdAt DateTime  @default(now())
-  updatedAt DateTime? @updatedAt
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  deadline    DateTime
+  files       String[]
+  group       Group     @relation(fields: [groupId], references: [id])
+  groupId     Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime? @updatedAt
 }
 
 model Item {
-  id         Int       @id @default(autoincrement())
-  title      String
-  homework   Homework  @relation(fields: [homeworkId], references: [id])
-  homeworkId Int
-  fileUrl    String
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime? @updatedAt
+  id    Int    @id @default(autoincrement())
+  title String
+
+  fileUrl   String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 }
 
 model Attendance {

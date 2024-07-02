@@ -1,12 +1,21 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  UseGuards,
+} from '@nestjs/common';
 import { LimitsService } from './limits.service';
 import { CreateLimitDto } from './dto/create-limit.dto';
 import { UpdateLimitDto } from './dto/update-limit.dto';
 import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
 import { AdminGuard } from 'src/admin/admin.guard';
 
-@UseGuards(AdminGuard)
-@ApiBearerAuth()
+// @UseGuards(AdminGuard)
+// @ApiBearerAuth()
 @ApiTags('Limits')
 @Controller('limits')
 export class LimitsController {
@@ -20,7 +29,6 @@ export class LimitsController {
         limits: { type: 'array', items: { type: 'number' } },
       },
     },
-  
   })
   @Post()
   create(@Body() body: CreateLimitDto) {
@@ -41,12 +49,11 @@ export class LimitsController {
     schema: {
       type: 'object',
       properties: {
-        id : { type: 'number' },
+        id: { type: 'number' },
         reason: { type: 'string' },
         limits: { type: 'array', items: { type: 'number' } },
       },
     },
-  
   })
   @Patch(':id')
   update(@Body() body: UpdateLimitDto) {

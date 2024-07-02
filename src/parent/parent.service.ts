@@ -64,6 +64,67 @@ export class ParentService {
     return parent;
   }
 
+  async findParentByCouratorId(id: number) {
+    // find all groups of courator
+    const groups = await this.prisma.groupCourator.findMany({
+      where: {
+        couratorId: id,
+      },
+      select: {
+        groupId: true,
+      },
+    });
+
+    // find all students of groups
+    const students = await this.prisma.student.findMany({
+      where: {
+        groupId: {
+          in: groups.map((group) => group.groupId),
+        },
+      },
+      select: {
+        id: true,
+      },
+    });
+
+    // find all parents of students
+
+    const parents = await this.prisma.parent.findMany({
+      where: {
+        students: {
+          some: {
+            id: {
+              in: students.map((student) => student.id),
+            },
+          },
+        },
+      },
+      select: {
+        id: true,
+        name: true,
+        login: true,
+        password: true,
+        students: {
+          select: {
+            id: true,
+            name: true,
+            age: true,
+            login: true,
+            password: true,
+            isActive: true,
+            _count: {
+              select: {
+                kiberones: true,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    return parents;
+  }
+
   async findParentById(id: number) {
     try {
       const parent = await this.prisma.parent.findUnique({

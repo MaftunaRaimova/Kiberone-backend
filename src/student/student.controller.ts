@@ -51,7 +51,13 @@ export class StudentControllerAdmin {
     return this.studentServiceAdmin.findAll();
   }
 
-  @Get(':id')
+  // by Courator
+  @Get('byCourator/:id')
+  findByCourator(@Param('id', ParseIntPipe) id: number) {
+    return this.studentServiceAdmin.findStudentByCouratorId(id);
+  }
+
+  @Get('byId/:id')
   findOne(@Param('id') id: string) {
     return this.studentServiceAdmin.findStudentById(+id);
   }

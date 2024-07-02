@@ -1,5 +1,7 @@
 export class CreateHomeworkDto {
-    title: string;
-    deadline: Date;
-    groupId: number;
+  title: string;
+  description: string;
+  deadline: Date;
+  groupId: number;
+  files: string[];
 }

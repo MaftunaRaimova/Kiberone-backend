@@ -1,0 +1,1595 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Пациенты</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>
+                                <thead>
+                                    <tr role="row"><th class="size-10 sorting_asc" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-sort="ascending" aria-label="№: активировать для сортировки столбца по убыванию" style="width: 32px;">№</th><th class="size-10 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="ID: активировать для сортировки столбца по возрастанию" style="width: 30px;">ID</th><th class="size-200 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="ФИО пациента: активировать для сортировки столбца по возрастанию" style="width: 268px;">ФИО пациента</th><th class="size-50 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Дaта рож.: активировать для сортировки столбца по возрастанию" style="width: 88px;">Дaта рож.</th><th class="size-100 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Телефон: активировать для сортировки столбца по возрастанию" style="width: 156px;">Телефон</th><th class="size-50 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Баланс: активировать для сортировки столбца по возрастанию" style="width: 69px;">Баланс</th><th class="size-80 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Посетил: активировать для сортировки столбца по возрастанию" style="width: 112px;">Посетил</th><th class="size-40 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Льгота: активировать для сортировки столбца по возрастанию" style="width: 65px;">Льгота</th><th class="size-50 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Регистратор: активировать для сортировки столбца по возрастанию" style="width: 145px;">Регистратор</th><th class="size-50 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Филиал: активировать для сортировки столбца по возрастанию" style="width: 74px;">Филиал</th><th class="size-20 sorting" tabindex="0" aria-controls="history" rowspan="1" colspan="1" aria-label="Фун-я: активировать для сортировки столбца по возрастанию" style="width: 61px;">Фун-я</th></tr>
+                                </thead>
+                                <tbody>
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                                                        	
+                                    
+                                    
+                                <tr class="table-danger red  odd" role="row">
+                                    	<td class="sorting_1">1</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=625">625</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=625">Ashrafxonova&nbsp;Xadicha&nbsp;Jamshid qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=625">27.12.2022</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=625">983031105 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=625" style="font-weight: bold;"><font color="Red">
+                                        -140000</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=625">29.06.2024 11:56</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=625">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=625">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=625">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=625&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">2</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10177">10177</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10177">Sotboldiyeva&nbsp;Zaxro&nbsp;Baxodirovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10177">10.12.1996</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10177">994069610 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10177" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10177">29.06.2024 11:55</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10177">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10177">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10177">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10177&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">3</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7908">7908</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=7908">Atabayeva&nbsp;Nilufar&nbsp;Baxtiyor qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7908">14.08.1996</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7908">946036505 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=7908" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=7908">29.06.2024 11:52</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7908">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7908">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7908">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=7908&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">4</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10045">10045</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10045">Lutfullayeva&nbsp;Nozima&nbsp;Karimovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10045">05.03.1975</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10045">937570780 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10045" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10045">29.06.2024 11:45</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10045">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10045">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10045">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10045&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">5</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=1324">1324</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=1324">Yunusov&nbsp;Muxammadyusuf&nbsp;Dilmurod ogli 
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=1324">26.07.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1324">977077717 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=1324" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=1324">29.06.2024 11:44</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1324">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1324">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1324">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=1324&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">6</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5302">5302</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5302">Rajabova&nbsp;Moxichexra&nbsp;Shaxobiddinovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5302">17.07.1990</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5302">971579404 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5302" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5302">29.06.2024 11:43</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5302">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5302">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5302">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5302&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">7</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10143">10143</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10143">Xaitmurodova&nbsp;Shaxodat&nbsp;Diyorovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10143">01.10.2020</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10143">978489597 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10143" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10143">29.06.2024 11:42</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10143">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10143">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10143">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10143&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">8</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9568">9568</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9568">Solmonjonov&nbsp;Abdullox&nbsp;Sarvorjon ogli
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9568">29.03.2022</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9568">977056202 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9568" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9568">29.06.2024 11:42</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9568">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9568">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9568">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9568&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">9</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5593">5593</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5593">Artikbayeva&nbsp;Munira&nbsp;Asilbekovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5593">16.10.1976</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5593">911343876 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5593" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5593">29.06.2024 11:37</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5593">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5593">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5593">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5593&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">10</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=2280">2280</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=2280">Akbarjonova&nbsp;Aisha&nbsp;Doston qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=2280">03.07.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2280">981233224 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=2280" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=2280">29.06.2024 11:36</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2280">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2280">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2280">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=2280&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">11</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10056">10056</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10056">Narbayev&nbsp;Rustam&nbsp;
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10056">19.03.2011</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10056">933974216 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10056" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10056">29.06.2024 11:35</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10056">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10056">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10056">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10056&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">12</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=186">186</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=186">Akbaraliyev&nbsp;Muxammad&nbsp;Komiljonovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=186">17.08.2021</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=186">946571551 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=186" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=186">29.06.2024 11:30</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=186">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=186">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=186">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=186&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">13</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10176">10176</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10176">Shoraxmedov&nbsp;Abdullox &nbsp;Shoirmat ogli
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10176">24.01.1990</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10176">997230505 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10176" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10176">29.06.2024 11:26</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10176">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10176">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10176">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10176&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr class="table-danger red  even" role="row">
+                                    	<td class="sorting_1">14</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3408">3408</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=3408">Meliyev&nbsp;Ural&nbsp;Nematilayevich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3408">01.01.1992</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3408">906726910 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=3408" style="font-weight: bold;"><font color="Red">
+                                        -155000</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=3408">29.06.2024 11:26</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3408">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3408">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3408">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=3408&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">15</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10175">10175</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10175">Maxmudov&nbsp;Azamjon&nbsp;Muzaffarovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10175">01.01.1993</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10175">990009360 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10175" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10175">29.06.2024 11:25</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10175">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10175">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10175">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10175&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">16</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10174">10174</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10174">Mirzayev&nbsp;Qobil&nbsp;Mirkamalovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10174">29.10.1985</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10174">770565005 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10174" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10174">29.06.2024 11:22</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10174">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10174">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10174">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10174&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">17</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5545">5545</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5545">Aliyeva&nbsp;Mamura&nbsp;Yunusovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5545">18.05.1988</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5545">900003201 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5545" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5545">29.06.2024 11:21</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5545">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5545">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5545">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5545&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">18</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10173">10173</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10173">Litipov&nbsp;Rustam &nbsp;Sulaymanovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10173">16.06.1986</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10173">974307789 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10173" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10173">29.06.2024 11:18</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10173">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10173">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10173">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10173&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">19</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10047">10047</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10047">Shermaxmatov&nbsp;Alibek&nbsp;Alisherovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10047">06.04.2020</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10047">901349978 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10047" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10047">29.06.2024 11:14</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10047">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10047">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10047">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10047&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">20</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10172">10172</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10172">Muxtorova&nbsp;Durdona&nbsp;Juraboy qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10172">15.01.1999</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10172">977729915 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10172" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10172">29.06.2024 11:10</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10172">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10172">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10172">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10172&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">21</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=539">539</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=539">Mansurova&nbsp;Mashxura&nbsp;Maxamadiyevna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=539">04.11.2001</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=539">9908694843 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=539" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=539">29.06.2024 11:08</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=539">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=539">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=539">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=539&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">22</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=8105">8105</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=8105">Qodiraliyeva&nbsp;Gulassal&nbsp;Tolibjonopvna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=8105">28.09.2000</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8105">938089990 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=8105" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=8105">29.06.2024 11:06</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8105">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8105">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8105">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=8105&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">23</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5628">5628</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5628">Xodiev&nbsp;Islomxon&nbsp;Lochin Ogli
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5628">13.06.2019</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5628">909049114 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5628" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5628">29.06.2024 11:00</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5628">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5628">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5628">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5628&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">24</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10171">10171</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10171">Xayrullayev&nbsp;Muxammadyusuf&nbsp;Lutfilla ogli
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10171">18.06.2002</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10171">887080040 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10171" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10171">29.06.2024 10:56</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10171">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10171">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10171">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10171&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">25</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9998">9998</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9998">Shavkatov&nbsp;Muxammmad&nbsp;Alisherovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9998">20.06.2021</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9998">339003500 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9998" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9998">29.06.2024 10:46</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9998">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9998">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9998">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9998&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">26</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10170">10170</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10170">Malikova&nbsp;Shaxnoza&nbsp;Rustamovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10170">16.07.1985</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10170">946706485 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10170" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10170">29.06.2024 10:42</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10170">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10170">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10170">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10170&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">27</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=44">44</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=44">Yusupova&nbsp;Kamila&nbsp;Nailevna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=44">06.07.1992</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=44">903180017 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=44" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=44">29.06.2024 10:41</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=44">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=44">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=44">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=44&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">28</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10169">10169</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10169">Oqbutayeva&nbsp;Mingdona&nbsp;Boltayevna
+																															<img src="images/telegram.ico" title="telegram" style="margin: 0 2px" class="fr" alt="Telegram">
+                                        										                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10169">10.05.1958</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10169">973512109 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10169" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10169">29.06.2024 10:38</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10169">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10169">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10169">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10169&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">29</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9060">9060</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9060">Samanova&nbsp;Qurbonoy&nbsp;Mardonaqulovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9060">02.07.1991</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9060">977107291 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9060" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9060">29.06.2024 10:36</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9060">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9060">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9060">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9060&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">30</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5948">5948</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5948">Amirov&nbsp;Amir&nbsp;Qodir ogli
+																															<img src="images/telegram.ico" title="telegram" style="margin: 0 2px" class="fr" alt="Telegram">
+                                        										                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5948">18.08.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5948">943299911 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5948" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5948">29.06.2024 10:31</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5948">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5948">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5948">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5948&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">31</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9623">9623</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9623">Muratbayeva&nbsp;Chaman&nbsp;Urinboyevna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9623">22.05.1995</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9623">996454621 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9623" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9623">29.06.2024 10:29</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9623">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9623">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9623">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9623&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">32</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10168">10168</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10168">Kamilov&nbsp;Mirakmal&nbsp;Mirasrorovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10168">21.08.1989</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10168">946735355 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10168" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10168">29.06.2024 10:27</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10168">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10168">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10168">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10168&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">33</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3489">3489</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=3489">Shokirova&nbsp;Oyishabegim&nbsp;Farrux qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3489">27.09.2021</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3489">909088936 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=3489" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=3489">29.06.2024 10:25</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3489">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3489">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3489">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=3489&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">34</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7662">7662</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=7662">Muzaffarova&nbsp;Madinabonu&nbsp;Azamxon  qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7662">05.12.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7662">993009360 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=7662" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=7662">29.06.2024 10:22</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7662">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7662">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7662">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=7662&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">35</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9957">9957</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9957">Naimova&nbsp;Ozoda&nbsp;Islom qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9957">26.12.2000</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9957">336103043 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9957" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9957">29.06.2024 10:21</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9957">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9957">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9957">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9957&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">36</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=6094">6094</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=6094">Azamova&nbsp;Zaynab&nbsp;Bexzod qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=6094">26.04.2007</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=6094">931076705 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=6094" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=6094">29.06.2024 10:20</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=6094">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=6094">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=6094">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=6094&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">37</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7316">7316</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=7316">Shavkiyeva&nbsp;Farogat&nbsp;Raxmatilla qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7316">18.12.1992</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7316">336470608 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=7316" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=7316">29.06.2024 10:18</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7316">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7316">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7316">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=7316&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">38</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7812">7812</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=7812">Ruzimbayeva&nbsp;Zilola&nbsp;Isroilbek qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=7812">06.01.2019</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7812">942315566 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=7812" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=7812">29.06.2024 10:16</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7812">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7812">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=7812">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=7812&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">39</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=8522">8522</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=8522">Ilxomova&nbsp;Asmira&nbsp;Azamatovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=8522">11.05.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8522">906071151 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=8522" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=8522">29.06.2024 10:14</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8522">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8522">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8522">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=8522&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">40</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10133">10133</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10133">Abdullayeva&nbsp;Roza&nbsp;Saotbayevna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10133">26.02.1995</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10133">975052602 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10133" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10133">29.06.2024 10:13</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10133">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10133">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10133">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10133&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">41</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5984">5984</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5984">Axmedova&nbsp;Gulchexra&nbsp;Saipnazarovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5984">13.03.1986</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5984">977377576 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5984" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5984">29.06.2024 10:12</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5984">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5984">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5984">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5984&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr class="table-danger red  even" role="row">
+                                    	<td class="sorting_1">42</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9558">9558</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9558">Doniyorova&nbsp;Salima&nbsp;Normurod qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9558">08.03.2002</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9558">909333055 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9558" style="font-weight: bold;"><font color="Red">
+                                        -70000</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9558">29.06.2024 10:05</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9558">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9558">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9558">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9558&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">43</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10167">10167</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10167">Mirzaqobilov&nbsp;Shoxruz&nbsp;Togaymurod ogli
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10167">14.05.1994</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10167">938870617 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10167" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10167">29.06.2024 10:03</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10167">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10167">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10167">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10167&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">44</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5857">5857</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5857">Idrisof&nbsp;Mustafo&nbsp;Sunnat ogli
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5857">19.11.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5857">950618876 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5857" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5857">29.06.2024 10:00</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5857">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5857">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5857">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5857&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">45</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=2805">2805</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=2805">Uktamov&nbsp;Amir&nbsp;Furqat ogli
+																															<img src="images/telegram.ico" title="telegram" style="margin: 0 2px" class="fr" alt="Telegram">
+                                        										                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=2805">05.12.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2805">904660151 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=2805" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=2805">29.06.2024 09:59</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2805">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2805">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=2805">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=2805&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">46</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9492">9492</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9492">Amonov&nbsp;Erkin&nbsp;Ostonovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9492">25.11.1991</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9492">977725590 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9492" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9492">29.06.2024 09:50</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9492">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9492">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9492">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9492&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">47</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9554">9554</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9554">Muxsinova&nbsp;Kumushxon&nbsp;Suxrob qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9554">26.01.1999</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9554">881592699 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9554" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9554">29.06.2024 09:45</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9554">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9554">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9554">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9554&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">48</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3068">3068</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=3068">Xolbekova&nbsp;Ozoda&nbsp;Abrarovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3068">08.03.1968</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3068">909592594 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=3068" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=3068">29.06.2024 09:42</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3068">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3068">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3068">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=3068&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">49</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=8473">8473</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=8473">Ramatullayeva&nbsp;Amina&nbsp;Baxramovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=8473">05.08.2003</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8473">957904044 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=8473" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=8473">29.06.2024 09:37</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8473">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8473">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=8473">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=8473&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">50</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5584">5584</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5584">Shodmonova&nbsp;Moxinur&nbsp;Abdunazar qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5584">25.01.2024</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5584">333005959 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5584" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5584">29.06.2024 09:35</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5584">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5584">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5584">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5584&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">51</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10009">10009</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10009">Toshev&nbsp;Jasur&nbsp;Asqarovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10009">17.04.1983</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10009">983117965 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10009" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10009">29.06.2024 09:23</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10009">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10009">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10009">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10009&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">52</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10166">10166</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10166">Qodirova&nbsp;Iroda&nbsp;Jaxongir qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10166">22.06.2002</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10166">910147441 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10166" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10166">29.06.2024 09:14</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10166">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10166">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10166">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10166&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">53</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10165">10165</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10165">Jaloliddinov&nbsp;Muxammadali&nbsp;Azizjonovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10165">28.01.2021</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10165">930906000 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10165" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10165">29.06.2024 09:11</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10165">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10165">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10165">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10165&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">54</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5264">5264</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5264">Sadullayeva&nbsp;Nodira&nbsp;Zayniddin qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5264">08.05.2000</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5264">977232193 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5264" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5264">29.06.2024 09:08</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5264">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5264">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5264">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5264&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">55</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3349">3349</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=3349">Xodjanov&nbsp;Baxodir&nbsp;Alimardonovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3349">27.07.1967</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3349">974003067 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=3349" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=3349">29.06.2024 09:05</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3349">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3349">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3349">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=3349&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">56</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10090">10090</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10090">Yusupov&nbsp;Gofur&nbsp;Saparmurodovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10090">03.11.2019</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10090">996454621 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10090" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10090">29.06.2024 09:04</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10090">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10090">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10090">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10090&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">57</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3568">3568</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=3568">Jabborova&nbsp;Zuxra&nbsp;Abduraxmonovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3568">20.03.1964</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3568">976948686 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=3568" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=3568">29.06.2024 09:02</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3568">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3568">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3568">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=3568&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">58</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10035">10035</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10035">Muminova&nbsp;Mexribon&nbsp;Shavkat qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10035">18.08.1990</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10035">933967848 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10035" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10035">29.06.2024 08:53</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10035">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10035">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10035">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10035&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">59</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10164">10164</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10164">Sanoqulova&nbsp;Mabrura&nbsp;Aminjon qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10164">30.04.2001</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10164">977725590 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10164" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10164">29.06.2024 08:48</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10164">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10164">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10164">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10164&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">60</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9695">9695</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9695">Yusupov&nbsp;Mirqosim&nbsp; mirxodjiyevich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9695">08.03.1959</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9695">974473899 ;908068585 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9695" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9695">29.06.2024 08:44</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9695">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9695">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9695">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9695&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr class="table-success odd" role="row">
+                                    	<td class="sorting_1">61</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=1036">1036</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=1036">Sadikova&nbsp;Saida&nbsp;Anvarovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=1036">07.06.1964</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1036">935271172 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=1036" style="font-weight: bold;"><font color="Green">
+                                        1000</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=1036">29.06.2024 08:41</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1036">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1036">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=1036">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=1036&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">62</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10096">10096</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10096">Ulmasov &nbsp;Mustafo &nbsp;Bexruz ogli 
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10096">29.07.2023</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10096">972820510 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10096" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10096">29.06.2024 08:38</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10096">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10096">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10096">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10096&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">63</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5449">5449</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=5449">Egamberdiyeva&nbsp;Oyshabonu&nbsp;Azamat qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=5449">17.10.2013</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5449">gv jiyanlari3 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=5449" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=5449">29.06.2024 08:23</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5449">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5449">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=5449">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=5449&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">64</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9797">9797</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9797">Ortiqov&nbsp;Ibroxim&nbsp; azamatovich
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9797">22.04.2015</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9797">gv jiyanlari </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9797" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9797">29.06.2024 08:23</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9797">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9797">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9797">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9797&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">65</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9195">9195</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9195">Egamberdiyeva&nbsp;Osiyo&nbsp;Azamat qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9195">12.03.2012</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9195">998467474 ;gv jiyanlari </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9195" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9195">29.06.2024 08:22</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9195">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9195">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9195">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9195&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">66</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10163">10163</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10163">Abduganiyeva&nbsp;Aziza&nbsp;Fozil qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10163">21.06.2002</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10163">996024434 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10163" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10163">29.06.2024 08:21</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10163">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10163">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10163">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10163&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="odd">
+                                    	<td class="sorting_1">67</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9985">9985</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9985">Shosaidova&nbsp;Nasiba&nbsp;Shavkat qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9985">09.12.1998</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9985">931206210 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9985" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9985">29.06.2024 08:20</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9985">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9985">Tashbayeva shaxnoza</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9985">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9985&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">68</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10162">10162</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10162">Gabazova&nbsp;Liliya&nbsp;Galinovna
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10162">11.08.1975</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10162">909379658 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10162" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10162">29.06.2024 08:04</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10162">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10162">Axrorova Iroda</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10162">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10162&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr class="table-success odd" role="row">
+                                    	<td class="sorting_1">69</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10161">10161</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10161">Rixsiyev&nbsp;Jamshid&nbsp;Jahongir ugli
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10161">01.01.1988</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10161">99 877 24 41 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10161" style="font-weight: bold;"><font color="Green">
+                                        3000</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10161">29.06.2024 00:47</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10161">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10161">Aliyev Ilxom</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10161">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10161&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr role="row" class="even">
+                                    	<td class="sorting_1">70</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10160">10160</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=10160">Bobokaramova &nbsp;Sunatta &nbsp;
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=10160">25.06.1966</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10160">974500753 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=10160" style="font-weight: bold;"><font color="Red">
+                                        0</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=10160">29.06.2024 00:17</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10160">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10160">aydus</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=10160">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=10160&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr class="table-success odd" role="row">
+                                    	<td class="sorting_1">71</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9724">9724</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=9724">Adilova&nbsp;Komila&nbsp;Alisher qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=9724">12.04.1996</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9724">999444815 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=9724" style="font-weight: bold;"><font color="Green">
+                                        1000</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=9724">29.06.2024 00:10</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9724">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9724">aydus</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=9724">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=9724&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr><tr class="table-danger red  even" role="row">
+                                    	<td class="sorting_1">72</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3332">3332</a></td>
+                                        <td style="background:#F0F8FF">
+                                        <a href="?mod=history&amp;op=edit&amp;elid=3332">Akromova&nbsp;Umida&nbsp;Nuriddin qizi
+																														                                                                                										</a>
+										
+										</td>
+                                        <td><a href="?mod=history&amp;op=edit&amp;elid=3332">07.10.1992</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3332">994800792 </a></td>
+                                      	<td><a href="?mod=history&amp;op=edit&amp;elid=3332" style="font-weight: bold;"><font color="Red">
+                                        -50000</font></a></td>
+                                        <td nowrap=""><a style="color:#f0f; font-weight:bold" href="?mod=history&amp;op=edit&amp;elid=3332">29.06.2024 00:01</a></td>
+										<td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3332">Без льгот</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3332">Aliyev Ilxom</a></td>
+                                        <td nowrap=""><a href="?mod=history&amp;op=edit&amp;elid=3332">Центр</a><a></a></td>
+                                        								
+                                        <td><a href="ajax/checkreport.php?cid=3332&quot;" class="nyroModal" onclick="return false;"><img src="images/ico_attention.png" width="20px"></a>
+                                        </td>   
+
+                                    </tr></tbody>
+                            </table></body></html>

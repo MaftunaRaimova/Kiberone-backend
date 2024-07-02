@@ -33,6 +33,7 @@
     "bcrypt": "^5.1.1",
     "class-validator": "^0.14.1",
     "cookie-parser": "^1.4.6",
+    "mkcert": "^3.2.0",
     "multer": "^1.4.5-lts.1",
     "passport-jwt": "^4.0.1",
     "pdf-lib": "^1.17.1",

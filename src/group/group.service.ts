@@ -12,7 +12,24 @@ export class GroupService {
       orderBy: {
         id: 'desc',
       },
+
       include: {
+        courators: {
+          include: {
+            courator: {
+              select: {
+                id: true,
+                name: true,
+              },
+            },
+          },
+        },
+        students: {
+          select: {
+            id: true,
+            name: true,
+          },
+        },
         _count: {
           select: {
             homework: true,
@@ -24,6 +41,42 @@ export class GroupService {
     });
   }
 
+  async findAllbyCourator(couratorId: number) {
+    return this.prisma.group.findMany({
+      where: {
+        courators: {
+          some: {
+            couratorId: couratorId,
+          },
+        },
+      },
+      include: {
+        courators: {
+          include: {
+            courator: {
+              select: {
+                id: true,
+                name: true,
+              },
+            },
+          },
+        },
+        students: {
+          select: {
+            id: true,
+            name: true,
+          },
+        },
+        _count: {
+          select: {
+            homework: true,
+            courators: true,
+            students: true,
+          },
+        },
+      },
+    });
+  }
   async findGroupById(id: number) {
     try {
       const group = await this.prisma.group.findUnique({
