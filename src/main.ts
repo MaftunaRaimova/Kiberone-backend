@@ -14,6 +14,7 @@ async function bootstrap() {
     .setTitle('Kiberone')
     .setDescription('The Kiberone API description')
     .setVersion('0.2')
+    .addServer('api')
     .addBearerAuth({
       description: 'Enter your JWT token',
       type: 'http',
@@ -25,6 +26,7 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
   app.enableCors();
   app.use(cookieParser());
+
   await app.listen(3333);
 }
 bootstrap();
